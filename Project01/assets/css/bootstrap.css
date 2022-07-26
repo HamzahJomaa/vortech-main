@@ -1,0 +1,24 @@
+.text-black{
+    color: black !important;
+}
+
+.right-dropdown{
+    right: 0 !important;
+}
+
+.left-unset{
+    left: unset !important;
+}
+
+.w-40{
+    width: 40% !important;
+}
+
+.w-90{
+    width: 90% !important;
+}
+
+.no-outline-bt{
+    outline: none !important;
+    box-shadow: none !important;
+}
