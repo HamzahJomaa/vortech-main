@@ -2,3 +2,35 @@
 #banner{
     background-position-x: 80% !important;
 }
+
+.light-blue{
+    background-color: rgba(159, 209, 230, 0.972);
+}
+
+.rounded-radius{
+    border-radius: 20px !important;
+}
+
+#banner-comprehensive-insurance{
+    background-position-x: 90% !important;
+    background-position-y: 90% !important;
+}
+
+.covers ul {
+    list-style: none;
+    list-style-position: outside;
+
+}
+.covers ul li{
+    text-indent: -1.5em;
+  padding-left: 1em;
+}
+.covers ul li:before {
+    content: '\2714\0020';
+    color:blue;
+  }
+
+.covers.card{
+    position: relative;
+    right: 10%;
+}
