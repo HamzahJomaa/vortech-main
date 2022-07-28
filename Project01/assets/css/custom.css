@@ -30,7 +30,14 @@
     color:blue;
   }
 
-.covers.card{
-    position: relative;
-    right: 10%;
+.buy-ins .img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 400px;
+}
+
+.docs > div{
+    height: 500px;
+    padding: 4rem;
 }

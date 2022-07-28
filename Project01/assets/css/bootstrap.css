@@ -10,6 +10,10 @@
     left: unset !important;
 }
 
+.w-30{
+    width: 30% !important;
+}
+
 .w-40{
     width: 40% !important;
 }
@@ -21,5 +25,9 @@
 .no-outline-bt{
     outline: none !important;
     box-shadow: none !important;
+}
+
+.h-fit{
+    height: fit-content;
 }
 
