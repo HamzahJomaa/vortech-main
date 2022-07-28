@@ -3,8 +3,12 @@
     background-position-x: 80% !important;
 }
 
-#banner .form{
+#banner .form form{
     width: 25%;
+}
+
+.section02 img.mobile-image{
+    display: none;
 }
 
 .light-blue{
@@ -60,8 +64,6 @@
         text-align: center;
     }
 
-    #banner .form,
-    #banner .form button,
     .section02 > div > div,
     .section02 > div > h2,
     .section03 > div > div,
@@ -76,6 +78,12 @@
     {
         width: 100% !important;
         text-align: center;
+    }
+
+
+
+    #banner .form button{
+        width: 80%;
     }
 
     .covers ul li, .covers ul {
@@ -94,6 +102,16 @@
     .docs > div{
         height: fit-content;
         padding: 0;
+    }
+
+
+    .section02 img.mobile-image{
+        display: block;
+    }
+
+
+    .section02{
+        background: lightblue !important;
     }
 
 
