@@ -3,6 +3,10 @@
     background-position-x: 80% !important;
 }
 
+#banner .form{
+    width: 25%;
+}
+
 .light-blue{
     background-color: rgba(159, 209, 230, 0.972);
 }
@@ -13,8 +17,9 @@
 
 #banner-comprehensive-insurance{
     background-position-x: 80% !important;
- 
 }
+
+
 
 .covers ul {
     list-style: none;
@@ -41,3 +46,57 @@
     height: 500px;
     padding: 4rem;
 }
+
+
+
+@media only screen and (max-width: 768px) {
+    nav{
+        background-color: #0566D7ff;
+    }
+
+
+    #banner {
+        background-position-y: bottom !important;
+        text-align: center;
+    }
+
+    #banner .form,
+    #banner .form button,
+    .section02 > div > div,
+    .section02 > div > h2,
+    .section03 > div > div,
+    .section05 > div > div > div,
+    .section07 > div > div > div,
+    .section08 > div > div,
+    .section09 > div > div > div,
+    .section11 > div > div > div > div,
+    .docs > div > div,
+    .section12 > div > div,
+    .section12 .card-item
+    {
+        width: 100% !important;
+        text-align: center;
+    }
+
+    .covers ul li, .covers ul {
+        padding-left: 10px;
+        text-align: left;
+    }
+
+
+
+    .buy-ins .img {
+        height: fit-content;
+        margin-bottom: 1rem;
+    }
+
+
+    .docs > div{
+        height: fit-content;
+        padding: 0;
+    }
+
+
+
+}
+
