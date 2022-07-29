@@ -55,6 +55,26 @@ nav img.white{
     padding: 4rem;
 }
 
+.mySwiper .swiper-slide{
+    background-color: #0D6EFD;
+    border-radius: 3rem;
+    width: 300px !important;
+}
+
+.swiper-wrapper{
+    height: 300px !important;
+    margin-bottom: 2rem;
+}
+
+.swiper-wrapper img{
+    width: 50% !important;
+}
+.swiper-wrapper h4 {
+    color: white;
+    text-align: center;
+    padding: 2rem;
+}
+
 
 
 @media only screen and (max-width: 768px) {
@@ -159,6 +179,15 @@ nav img.white{
 
     .navbar-light .navbar-toggler-icon{
         background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'><path stroke='rgba%28255, 255, 255, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/></svg>");
+    }
+
+
+    .mySwiper .swiper-slide{
+        width: 250px !important;
+    }
+
+    .swiper-wrapper{
+        height: 250px !important;
     }
 
 

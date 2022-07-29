@@ -9,6 +9,8 @@
 
         <link rel="stylesheet" href="../assets/css/custom.css"> <!--For Custom Classes-->
 
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     </head>
@@ -60,17 +62,48 @@
         </div>
     </nav>
 
-    <section class="w-100 h-75 mt-5" id="banner" style="background: url('../assets/svg/banner01.svg') no-repeat">
-        <div class="w-75 mx-auto text-left">
-            <h1>Find the best coverage with the best insurer</h1>
-            <h1 class="text-primary">Let's Start</h1>
+    <section class="w-100 mt-5" id="banner" style="background: url('../assets/svg/banner01.svg') no-repeat">
+        <div>
+            <div class="w-75 mx-auto text-left">
+                <h1>Find the best coverage with the best insurer</h1>
+                <h1 class="text-primary">Let's Start</h1>
+            </div>
+            <div class="form w-75 mx-auto">
+                <form action="">
+                    <input class="form-control my-2 no-outline-bt border-1" type="text" placeholder="Full Name" >
+                    <input class="form-control my-2 no-outline-bt"  type="text" placeholder="Phone Number" >
+                    <button type="button" class="btn btn-primary my-2">Get a Quote</button>
+                </form>
+            </div>
         </div>
-        <div class="form w-75 mx-auto">
-            <form action="">
-                <input class="form-control my-2 no-outline-bt border-1" type="text" placeholder="Full Name" >
-                <input class="form-control my-2 no-outline-bt"  type="text" placeholder="Phone Number" >
-                <button type="button" class="btn btn-primary my-2">Get a Quote</button>
-            </form>
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide d-flex flex-column justify-content-center align-items-center">
+                    <img src="../assets/images/template-icon.png" alt="">
+                    <h4>Best Price Guaranteed</h4>
+                </div>
+                <div class="swiper-slide d-flex flex-column justify-content-center align-items-center">
+                    <img src="../assets/images/template-icon.png" alt="">
+                    <h4>Discounts up to 50%</h4>
+                </div>
+                <div class="swiper-slide d-flex flex-column justify-content-center align-items-center">
+                    <img src="../assets/images/template-icon.png" alt="">
+                    <h4>Best Garages Repair in UAE</h4>
+                </div>
+                <div class="swiper-slide d-flex flex-column justify-content-center align-items-center">
+                    <img src="../assets/images/template-icon.png" alt="">
+                    <h4>Issue Policy in 15 minutes</h4>
+                </div>
+                <div class="swiper-slide d-flex flex-column justify-content-center align-items-center">
+                    <img src="../assets/images/template-icon.png" alt="">
+                    <h4>Insure now. Pay later.</h4>
+                </div>
+                <div class="swiper-slide d-flex flex-column justify-content-center align-items-center">
+                    <img src="../assets/images/template-icon.png" alt="">
+                    <h4>Win vouchers and coupons.</h4>
+                </div>
+            </div>
+            <div class="swiper-pagination"></div>
         </div>
     </section>
 
@@ -452,11 +485,41 @@
 
     <script src="../assets/lib/bootstrap-5.0.2/dist/js/bootstrap.bundle.min.js"  integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 
-    <script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
 
+    <script>
 
         $(document).ready(function (e) {
 
+
+            var swiper = new Swiper(".mySwiper", {
+                slidesPerView: 1,
+                spaceBetween: 10,
+                loop: true,
+                autoplay: {
+                    delay: 1500,
+                    disableOnInteraction: false,
+                },
+                pagination: {
+                    el: ".swiper-pagination",
+                    clickable: true,
+                },
+                breakpoints: {
+                    640: {
+                        slidesPerView: 3,
+                        spaceBetween: 20,
+                    },
+                    768: {
+                        slidesPerView: 4,
+                        spaceBetween: 40,
+
+                    },
+                    1024: {
+                        slidesPerView: 5,
+                        spaceBetween: 50,
+                    },
+                },
+            });
 
             $(".navbar-toggler").click(function (event) {
                 $("#navbarSupportedContent").toggle("show")
