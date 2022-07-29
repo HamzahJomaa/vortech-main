@@ -3,6 +3,10 @@
     background-position-x: 80% !important;
 }
 
+nav img.white{
+    display: none;
+}
+
 #banner .form form{
     width: 25%;
 }
@@ -57,7 +61,30 @@
     nav{
         background-color: #0566D7ff;
     }
+    .navbar-light .navbar-brand{
+        width: 50%;
 
+    }
+    nav img.white{
+        width: 100%;
+        display: block;
+    }
+
+    .navbar-light .navbar-nav .nav-link{
+        color: white;
+    }
+    nav img.colored{
+        display: none;
+    }
+    #dropdownMenuButton1{
+        width: 100%;
+        text-align: left;
+        display: flex;
+        color: white !important;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
 
     #banner {
         background-position-y: bottom !important;
