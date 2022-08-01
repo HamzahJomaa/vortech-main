@@ -493,9 +493,10 @@
 
 
             var swiper = new Swiper(".mySwiper", {
-                slidesPerView: 1,
-                spaceBetween: 10,
                 loop: true,
+                loopedSlides: 10,
+                slidesPerView: 'auto',
+                spaceBetween: 10,
                 autoplay: {
                     delay: 1500,
                     disableOnInteraction: false,
@@ -506,16 +507,15 @@
                 },
                 breakpoints: {
                     640: {
-                        slidesPerView: 3,
+                        slidesPerView: 'auto',
                         spaceBetween: 20,
                     },
                     768: {
-                        slidesPerView: 4,
+                        slidesPerView: 'auto',
                         spaceBetween: 40,
-
                     },
                     1024: {
-                        slidesPerView: 5,
+                        slidesPerView: 'auto',
                         spaceBetween: 50,
                     },
                 },

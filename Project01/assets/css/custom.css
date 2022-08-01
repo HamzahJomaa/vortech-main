@@ -58,21 +58,21 @@ nav img.white{
 .mySwiper .swiper-slide{
     background-color: #0D6EFD;
     border-radius: 3rem;
-    width: 300px !important;
+    width: 15rem !important;
 }
 
 .swiper-wrapper{
-    height: 300px !important;
+    height: 15rem !important;
     margin-bottom: 2rem;
 }
 
 .swiper-wrapper img{
-    width: 50% !important;
+    width: 40% !important;
 }
 .swiper-wrapper h4 {
     color: white;
     text-align: center;
-    padding: 2rem;
+    padding: 1rem;
 }
 
 
@@ -183,11 +183,18 @@ nav img.white{
 
 
     .mySwiper .swiper-slide{
-        width: 250px !important;
+        width: 10rem !important;
     }
 
     .swiper-wrapper{
-        height: 250px !important;
+        height: 10rem !important;
+    }
+
+    .swiper-wrapper h4 {
+        color: white;
+        text-align: center;
+        font-size: .9rem;
+        padding: .5rem;
     }
 
 
