@@ -432,7 +432,7 @@
     </section>
 
 
-    <section class="w-100 p-lg-5 section12 py-lg-0 py-5" style="background: url('../assets/images/insurance.png') lightblue no-repeat; background-size: 40%; background-position-x: left; background-position-y: bottom">
+    <section class="w-100 p-lg-5 section12 py-lg-2 py-5" style="background: url('../assets/images/insurance.png') lightblue no-repeat; background-size: 40%; background-position-x: left; background-position-y: bottom">
         <div class="w-90 h-fit mx-auto d-flex flex-lg-row flex-column justify-content-between">
             <div class="w-40 py-lg-2">
                 <h3 class="fw-bold mb-lg-5">How to Renew Motor Insurance in UAE?</h3>
@@ -481,6 +481,82 @@
         </div>
 
     </section>
+
+    <footer class="footer">
+        <div class="footer-container row">
+            <div class="brief col-lg-4 p-lg-3">
+                <h2 class="pb-2">Insurance</h2>
+                <p class="pb-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer vitae facilisis enim, sed semper enim. Suspendisse ac ligula imperdiet, lobortis orci in</p>
+                <div class="social-media d-flex flex-row justify-content-between">
+                    <a href="#"><img src="../assets/img/footer/facebook.png" alt=""></a>
+                    <a href="#"><img src="../assets/img/footer/twitter.png" alt=""></a>
+                    <a href="#"><img src="../assets/img/footer/insta.png" alt=""></a>
+                </div>
+            </div>
+            <div class="links container col-lg-4  d-flex flex-row">
+                <div class="p-lg-3">
+                    <h4 class="pb-lg-3">Useful Links</h4>
+                    <a href="">About Us</a>
+                    <a href="">FAQs</a>
+                    <a href="">Contact US</a>
+                </div>
+                <div class="p-lg-3">
+                    <h4 class="pb-lg-3">Helpful Links</h4>
+                    <a href="">Terms and Conditions</a>
+                    <a href="">Privacy Policy</a>
+                    <a href="">Discliamer</a>
+                </div>
+            </div>
+            <div class="desc col-lg-4 p-lg-3">
+                <div class="location d-flex mb-4">
+                    <img src="../assets/img/footer/gps.png" alt="">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </div>
+                <div class="contact d-flex flex-row justify-content-between align-items-center mb-4">
+                    <div class="phone d-flex align-items-center ">
+                        <img class="me-lg-2" src="../assets/img/footer/phone.png" alt="">
+                        <p class="m-0 p-0">123-456-789</p>
+                    </div>
+                    <div class="email d-flex align-items-center ">
+                        <img class="me-1 me-lg-2" src="../assets/img/footer/email.png" alt="">
+                        <p class="m-0 p-0">info@mail.com</p>
+                    </div>
+                </div>
+                <div class="payment">
+                    <p class="m-0 p-0">We Accept:</p>
+                    <div class="payment-icons">
+                        <img class="me-lg-2" src="../assets/img/footer/visa.png" alt="">
+                        <img class="me-lg-2" src="../assets/img/footer/master.png" alt="">
+                        <img class="me-lg-2" src="../assets/img/footer/apple.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div class="floating-btn">
+        <a href=""><img src="../assets/svg/sms.svg" alt="" /></a>
+    </div>
+
+    <div class="sidebar">
+        <div class="siderbar-logo whatsapp">
+            <img src="../assets/img/whatsapp.png" alt="">
+            <h5 class="ps-2">Whatsapp</h5>
+        </div>
+        <div class="siderbar-logo phone">
+            <img src="../assets/img/phone.png" alt="">
+            <h5 class="ps-2">Whatsapp</h5>
+        </div>
+        <div class="siderbar-logo telegram">
+            <img src="../assets/img/telegram.png" alt="">
+            <h5 class="ps-2">Whatsapp</h5>
+        </div>
+        <div class="siderbar-logo chat">
+            <img src="../assets/img/chat.png" alt="">
+            <h5 class="ps-2">Whatsapp</h5>
+        </div>
+    </div>
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
     <script src="../assets/lib/bootstrap-5.0.2/dist/js/bootstrap.bundle.min.js"  integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
@@ -493,9 +569,10 @@
 
 
             var swiper = new Swiper(".mySwiper", {
-                slidesPerView: 1,
-                spaceBetween: 10,
                 loop: true,
+                loopedSlides: 10,
+                slidesPerView: 'auto',
+                spaceBetween: 10,
                 autoplay: {
                     delay: 1500,
                     disableOnInteraction: false,
@@ -506,16 +583,15 @@
                 },
                 breakpoints: {
                     640: {
-                        slidesPerView: 3,
+                        slidesPerView: 'auto',
                         spaceBetween: 20,
                     },
                     768: {
-                        slidesPerView: 4,
+                        slidesPerView: 'auto',
                         spaceBetween: 40,
-
                     },
                     1024: {
-                        slidesPerView: 5,
+                        slidesPerView: 'auto',
                         spaceBetween: 50,
                     },
                 },
