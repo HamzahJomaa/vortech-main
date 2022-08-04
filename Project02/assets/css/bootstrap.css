@@ -1,0 +1,55 @@
+.text-white{
+    color:white;
+}
+
+.text-primary{
+    color:#4870ab !important;
+}
+
+.btn-primary{
+    background-color: #4870ab !important;
+}
+
+.border-primary{
+    border:#4870ab solid 1.5px !important
+}
+
+.bg-secondary{
+    background-color: #F0F0F0 !important;
+}
+
+.w-20{
+    width: 20% !important;
+}
+
+.w-30{
+    width: 30% !important;
+}
+
+.w-40{
+    width: 40% !important;
+}
+
+.w-60{
+    width: 60% !important;
+}
+
+.w-70{
+    width: 70% !important;
+}
+.w-80{
+    width: 80% !important;
+}
+
+
+.w-90{
+    width: 90% !important;
+}
+
+.w-fit{
+    width: fit-content;
+}
+
+.h-fit{
+    height: fit-content;
+}

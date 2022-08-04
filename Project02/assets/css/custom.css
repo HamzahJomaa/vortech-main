@@ -1,0 +1,53 @@
+.dark-blue{
+    color:#191970 !important;
+}
+
+.rounded-radius{
+    border-radius: 10px !important;
+}
+
+.section01{
+    height: 700px;
+}
+
+#banner{
+    background-position-y: -80% !important;
+}
+
+.section04 .cars-img{
+    margin-top: 5%;
+}
+
+.section06 ul {
+    list-style: none;
+    list-style-position: outside;
+
+}
+.section06 ul li{
+    text-indent: -1.5em;
+  padding-left: 1em;
+}
+.section06 ul li:before {
+    content: '\2714\0020';
+    color:blue;
+  }
+
+  footer{
+    height: fit-content;
+    background-color: rgba(0, 91, 157, 1);
+    display: block;
+    width: 100%;
+    padding: 3rem 0;
+}
+
+.footer-container{
+    padding: 2rem;
+}
+
+footer .links a{
+    display: block;
+    color: black;
+    text-decoration: unset;
+    margin: 1.3rem 0;
+    white-space: nowrap;
+}
