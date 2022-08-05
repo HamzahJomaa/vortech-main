@@ -32,6 +32,11 @@
     color:blue;
   }
 
+  .mySwiper .swiper-slide{
+    width: 100% !important;
+    height: 100% !important;
+}
+
   footer{
     height: fit-content;
     background-color: rgba(0, 91, 157, 1);
@@ -50,4 +55,86 @@ footer .links a{
     text-decoration: unset;
     margin: 1.3rem 0;
     white-space: nowrap;
+}
+
+@media only screen and (max-width: 768px) {
+    nav{
+        background-color: #0566D7ff;
+    }
+    .navbar-light .navbar-brand{
+        width: 50%;
+
+    }
+    nav img.white{
+        width: 100%;
+        display: block;
+    }
+
+    .navbar-light .navbar-nav .nav-link{
+        color: white;
+    }
+    nav img.colored{
+        display: none;
+    }
+    #dropdownMenuButton1{
+        width: 100%;
+        text-align: left;
+        display: flex;
+        color: white !important;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    #banner {
+        background-position-y: bottom !important;
+        text-align: center;
+    }
+
+    .section02 > div > div,
+    .section02 > div > h2,
+    .section03 > div > div,
+    .section04 >div>div>div,
+    .section04 >div>div>div p,
+    .section05 > div ,
+    .section05 >div > div > div > div,
+    .section06 > div >div,
+    .section07 > div > div > div,
+    .section08 > div > div,
+    .section09 > div > div > div,
+    .section11 > div > div > div > div,
+    #banner .form form
+    {
+        width: 100% !important;
+        text-align: center;
+    }
+
+    .section06,.section04>div{
+        background: white !important;
+    }
+
+    .section06 ul li, .section06 ul {
+        padding-left: 10px;
+        text-align: left;
+    }
+    .navbar-light .navbar-toggler{
+        border: none;
+    }
+
+    .navbar-light .navbar-toggler-icon{
+        background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'><path stroke='rgba%28255, 255, 255, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/></svg>");
+    }
+
+    footer .footer-container{
+        width: 100%;
+    }
+
+    footer .footer-container>div{
+        margin-bottom: 2rem;
+    }
+
+    .footer-container {
+        padding: 1rem;
+    }
+
 }
