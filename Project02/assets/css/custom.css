@@ -10,9 +10,6 @@
     height: 700px;
 }
 
-#banner{
-    background-position-y: -80% !important;
-}
 
 .section04 .cars-img{
     margin-top: 5%;
@@ -35,7 +32,27 @@
   .mySwiper .swiper-slide{
     width: 100% !important;
     height: 100% !important;
+    cursor: pointer;
 }
+
+.mySwiper .swiper-pagination-bullet {
+    width: 60px;
+    height: 1px;
+    color:#000;
+    opacity: 1;
+    background: rgba(0,0,0,0.2);
+}
+
+.mySwiper .swiper-pagination-bullet-active {
+    background: #007aff;
+}
+
+.mySwiper .swiper-button-next , .mySwiper .swiper-button-prev{
+    color: #4870ab;
+}
+
+
+
 
   footer{
     height: fit-content;
@@ -59,7 +76,7 @@ footer .links a{
 
 @media only screen and (max-width: 768px) {
     nav{
-        background-color: #0566D7ff;
+        background-color: #4870ab;
     }
     .navbar-light .navbar-brand{
         width: 50%;
@@ -69,7 +86,6 @@ footer .links a{
         width: 100%;
         display: block;
     }
-
     .navbar-light .navbar-nav .nav-link{
         color: white;
     }
@@ -86,16 +102,36 @@ footer .links a{
         justify-content: space-between;
     }
 
-    #banner {
-        background-position-y: bottom !important;
-        text-align: center;
+    #navbarSupportedContent{
+        height: 30vh;
+    }
+
+    #navbarSupportedContent ul{
+        --bs-scroll-height: 70% !important;
+        width: 100% !important;
+    }
+
+    .navbar-light .navbar-toggler{
+        border: none;
+    }
+
+    .navbar-light .navbar-toggler-icon{
+        background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'><path stroke='rgba%28255, 255, 255, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/></svg>");
+    }
+
+    .mySwiper .swiper-slide {
+        background-size:contain !important;
+    }
+    .mySwiper .swiper-slide div{
+        width: 100% !important;
     }
 
     .section02 > div > div,
     .section02 > div > h2,
     .section03 > div > div,
+    .section03 .card .card-text,
     .section04 >div>div>div,
-    .section04 >div>div>div p,
+    .section04 >div > div> div p,
     .section05 > div ,
     .section05 >div > div > div > div,
     .section06 > div >div,
@@ -109,6 +145,10 @@ footer .links a{
         text-align: center;
     }
 
+    .section03 .image-lg{
+        display: none;
+    }
+
     .section06,.section04>div{
         background: white !important;
     }
@@ -117,14 +157,6 @@ footer .links a{
         padding-left: 10px;
         text-align: left;
     }
-    .navbar-light .navbar-toggler{
-        border: none;
-    }
-
-    .navbar-light .navbar-toggler-icon{
-        background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'><path stroke='rgba%28255, 255, 255, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/></svg>");
-    }
-
     footer .footer-container{
         width: 100%;
     }

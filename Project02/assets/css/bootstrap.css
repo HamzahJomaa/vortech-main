@@ -53,3 +53,7 @@
 .h-fit{
     height: fit-content;
 }
+
+.start-90{
+    left:90%;
+}

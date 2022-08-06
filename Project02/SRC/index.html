@@ -11,19 +11,41 @@
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
 
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" ></script> <!-- for dropdown-->
+
     <title>Document</title>
 </head>
 <body>
+
+    <header class="bg-secondary">
+        <div class="header-section">
+            <div class="dropdown start-90">
+                <button class="btn dropdown-toggle dark-blue fw-bold" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  LANGUAGE
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                  <a class="dropdown-item" href="#">English</a>
+                  <a class="dropdown-item" href="#">Arabic</a>
+                  <a class="dropdown-item" href="#">French</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
     <nav class="navbar navbar-expand-lg navbar-light">
         <div class="container-fluid w-90 mx-auto">
             <a class="navbar-brand" href="#">
-                <img class="colored" src="" alt="Logo">
+                <img class="colored" src="../assets/images/logo.png" alt="Logo">
             </a>
 
+            <button class="navbar-toggler" type="button" >
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll w-40 justify-content-evenly" style="--bs-scroll-height: 100px;">
+                <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll w-100 justify-content-around" style="--bs-scroll-height: 100px;">
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle h6 dark-blue" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <a class="nav-link dropdown-toggle h6 dark-blue fw-bold" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                           HOME
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -32,7 +54,7 @@
                         </div>
                       </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle h6 dark-blue" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <a class="nav-link dropdown-toggle h6 dark-blue fw-bold" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                           INSURANCE
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -41,7 +63,7 @@
                         </div>
                       </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle h6 dark-blue" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <a class="nav-link dropdown-toggle h6 dark-blue fw-bold" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                           ABOUT
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -50,15 +72,15 @@
                         </div>
                       </li>
                       <li class="nav-item">
-                        <a class="nav-link active h6 dark-blue" href="#">GET QUOTE</a>
+                        <a class="nav-link active h6 dark-blue fw-bold" href="#">GET QUOTE</a>
                     </li>
-                </ul>
-                <div>
-                    <button class="btn btn-primary text-white rounded fw-bold rounded-radius" type="button">
-                        SIGN IN
-                    </button>
-                    
-                        <button class="btn btn-primary  text-white dropdown-toggle fw-bold rounded-radius" type="button"  data-bs-toggle="dropdown" aria-expanded="false">
+                    <li>
+                        <button class="btn btn-primary text-white rounded fw-bold rounded-radius border-0 px-5" type="button">
+                            SIGN IN
+                        </button>
+                    </li>
+                    <li>
+                        <button class="btn btn-primary  text-white dropdown-toggle fw-bold rounded-radius border-0 px-5" type="button"  data-bs-toggle="dropdown" aria-expanded="false">
                             SUPPORT
                         </button>
                         <ul class="dropdown-menu right-dropdown " aria-labelledby="dropdownMenuButton1">
@@ -66,33 +88,36 @@
                             <li><a class="dropdown-item" href="#">Another action</a></li>
                             <li><a class="dropdown-item" href="#">Something else here</a></li>
                         </ul>
-                </div>
+                    </li>
+                </ul>
             </div>
         </div>
     </nav>
 
-    <section class="section01 w-100 mt-5" id="banner">
-        <div class="swiper mySwiper">
+    <section class="section01 w-100">
+        <div class="swiper mySwiper h-100">
             <div class="swiper-wrapper w-100">
-            <div class="swiper-slide h-100 mx-auto text-center" style="background: url('../assets/images/banner-img-3.png') #F0F0F0 no-repeat;background-size: auto;">
-                <h1 class="text-center">WE GIVE OPPURTUNITIES AT MAXIMUM LOW COST</h1>
-                    <button class="btn btn-primary  text-white fw-bold rounded-radius mx-auto" type="button">
-                        GET A QUOTE
-                    </button>
+            <div class="swiper-slide mx-auto text-center" style="background: url('../assets/images/banner-img-3.png') #F0F0F0 no-repeat;background-size:cover; background-position:center;">
+                <div class="w-40 mx-auto">
+                    <h1 class="text-center">WE GIVE OPPURTUNITIES AT MAXIMUM LOW COST</h1>
+                    <button class="btn btn-primary  text-white fw-bold rounded-radius mx-auto mt-3" type="button"> GET A QUOTE</button>
+                </div>
             </div>
-            <div class="swiper-slide w-100 mx-auto text-center" style="background: url('../assets/images/banner-img-3.png') #F0F0F0 no-repeat;background-size: cover;background-position:bottom center">
-                <h1 class="text-center">WE GIVE OPPURTUNITIES AT MAXIMUM LOW COST</h1>
-                    <button class="btn btn-primary  text-white fw-bold rounded-radius mx-auto" type="button">
-                        GET A QUOTE
-                    </button>
+            <div class="swiper-slide mx-auto text-center" style="background: url('../assets/images/banner-img-3.png') #F0F0F0 no-repeat;background-size:cover; background-position:center;">
+                <div class="w-40 mx-auto">
+                    <h1 class="text-center">WE GIVE OPPURTUNITIES AT MAXIMUM LOW COST</h1>
+                    <button class="btn btn-primary  text-white fw-bold rounded-radius mx-auto mt-3" type="button"> GET A QUOTE</button>
+                </div>
             </div>
-            <div class="swiper-slide w-100 mx-auto text-center" style="background: url('../assets/images/banner-img-3.png') #F0F0F0 no-repeat;background-size: cover;background-position:bottom center">
-                <h1 class="text-center">WE GIVE OPPURTUNITIES AT MAXIMUM LOW COST</h1>
-                    <button class="btn btn-primary  text-white fw-bold rounded-radius mx-auto" type="button">
-                        GET A QUOTE
-                    </button>
+            <div class="swiper-slide mx-auto text-center" style="background: url('../assets/images/banner-img-3.png') #F0F0F0 no-repeat;background-size:cover; background-position:center;">
+                <div class="w-40 mx-auto">
+                    <h1 class="text-center">WE GIVE OPPURTUNITIES AT MAXIMUM LOW COST</h1>
+                    <button class="btn btn-primary  text-white fw-bold rounded-radius mx-auto mt-3" type="button"> GET A QUOTE</button>
+                </div>
             </div>
         </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
         <div class="swiper-pagination"></div>
     </div>
     </section>
@@ -122,7 +147,7 @@
 
     <section class="section03 w-100 bg-secondary p-5">
         <div class="w-90 mx-auto d-flex flex-lg-row">
-            <div class="w-40 h-fit">
+            <div class="image-lg w-40 h-fit">
                 <img src="../assets/images/get-quote-img-3.png" alt="" class="w-80">
             </div>
             <div class="w-60">
@@ -130,38 +155,38 @@
                     GET INSURANCE QUOTE
                 </h1>
                 <div class="d-flex flex-lg-row gap-1 mt-5">
-                    <div class="card rounded-radius d-flex flex-row col justify-content-center align-items-center">
+                    <div class="card rounded-radius d-flex flex-lg-row flex-column col justify-content-center align-items-center">
                         <div class="card-img w-30">
                             <img src="../assets/images/car.png" alt="" class="w-100">
                         </div>
-                        <div class="w-70 py-1">
+                        <div class="card-text w-70 py-1">
                             <p class="text-primary fw-bold mb-0">CAR</p>
                             <p class="text-primary">INSURANCE</p>
                         </div>
                     </div>
-                    <div class="card rounded-radius d-flex flex-row col justify-content-center align-items-center">
+                    <div class="card rounded-radius d-flex flex-lg-row flex-column col justify-content-center align-items-center">
                         <div class="card-img w-30">
                             <img src="../assets/images/car.png" alt="" class="w-100">
                         </div>
-                        <div class="w-70 py-1 ">
+                        <div class="card-text w-70 py-1 ">
                             <p class="text-primary fw-bold mb-0">HOME</p>
                             <p class="text-primary">INSURANCE</p>
                         </div>
                     </div>
-                    <div class="card rounded-radius d-flex flex-row col justify-content-center align-items-center">
+                    <div class="card rounded-radius d-flex flex-lg-row flex-column col justify-content-center align-items-center">
                         <div class="card-img w-30">
                             <img src="../assets/images/car.png" alt="" class="w-100">
                         </div>
-                        <div class="w-70 py-1">
+                        <div class="card-text w-70 py-1">
                             <p class="text-primary fw-bold mb-0">Travel</p>
                             <p class="text-primary">INSURANCE</p>
                         </div>
                     </div>
-                    <div class="card rounded-radius d-flex flex-row col justify-content-center align-items-center">
+                    <div class="card rounded-radius d-flex flex-lg-row flex-column col justify-content-center align-items-center">
                         <div class="card-img w-30">
                             <img src="../assets/images/car.png" alt="" class="w-100">
                         </div>
-                        <div class="w-70 py-1">
+                        <div class="card-text w-70 py-1">
                             <p class="text-primary fw-bold mb-0">Medical</p>
                             <p class="text-primary">INSURANCE</p>
                         </div>
@@ -190,7 +215,7 @@
                             </div>
                           </div>
                           <div class="mx-auto m-5 text-center">
-                                <button class="btn btn-primary text-white fw-bold rounded-radius border-0 w-30" type="submit">
+                                <button class="btn btn-primary text-white fw-bold rounded-radius border-0 w-lg-30 w-50" type="submit">
                                     GET A QUOTE
                                 </button>
                            </div>
@@ -355,9 +380,9 @@
                 <h2 class="pb-2">Insurance</h2>
                 <p class="pb-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer vitae facilisis enim, sed semper enim. Suspendisse ac ligula imperdiet, lobortis orci in</p>
                 <div class="social-media d-flex flex-row justify-content-between">
-                    <a href="#"><img src="../assets/img/footer/facebook.png" alt=""></a>
-                    <a href="#"><img src="../assets/img/footer/twitter.png" alt=""></a>
-                    <a href="#"><img src="../assets/img/footer/insta.png" alt=""></a>
+                    <a href="#"><img src="" alt=""></a>
+                    <a href="#"><img src="" alt=""></a>
+                    <a href="#"><img src="" alt=""></a>
                 </div>
             </div>
 
@@ -404,21 +429,26 @@
    </footer>
 
    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-   <script src="../assets/lib/bootstrap-5.0.2/dist/js/bootstrap.bundle.min.js"  integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous"></script>	
    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
 
    <script>
      $(document).ready(function(e){
 
         var swiper= new Swiper(".mySwiper",{
-            loop:true,
             slidesPerView:1,
-            autoplay: {
-                    delay: 1500,
-                    disableOnInteraction: false,
-                },
+            navigation:{
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            pagination:{
+                el:'.swiper-pagination'
+            }
 
         })
+
+        
+        swiper.slideNext();
 
      })
    </script>
