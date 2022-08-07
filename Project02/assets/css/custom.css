@@ -188,8 +188,9 @@ footer .links a{
         padding-left: 10px;
         text-align: left;
     }
-    footer .footer-container{
+    footer .footer-container,footer .footer-info p{
         width: 100%;
+        text-align: center;
     }
 
     footer .footer-container>div{

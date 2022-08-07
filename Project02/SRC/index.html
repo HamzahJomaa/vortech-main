@@ -74,7 +74,7 @@
                     </li>
                 </ul>
             </div>
-            <div class="right d-grid gap-2 d-md-flex justify-content-md-end">
+            <div class="nav-buttons d-grid gap-2 d-md-flex justify-content-md-end">
                 <button class="btn btn-primary text-white rounded fw-bold rounded-radius border-0 px-5" type="button">
                     SIGN IN
                 </button>
@@ -353,13 +353,13 @@
                     <img src="../assets/images/amazon.png" alt="" class="w-80 p-1 mx-auto">
                 </div>
                 <div class="card border w-20 shadow rounded-radius h-fit">
-                    <img src="../assets/images/amazon.png" alt="" class="w-80 p-1">
+                    <img src="../assets/images/amazon.png" alt="" class="w-80 p-1 mx-auto">
                 </div>
                 <div class="card border w-20 shadow rounded-radius h-fit">
-                    <img src="../assets/images/amazon.png" alt="" class="w-80 p-1">
+                    <img src="../assets/images/amazon.png" alt="" class="w-80 p-1 mx-auto">
                 </div>
                 <div class="card border w-20 shadow rounded-radius h-fit">
-                    <img src="../assets/images/amazon.png" alt="" class="w-80 p-1">
+                    <img src="../assets/images/amazon.png" alt="" class="w-80 p-1 mx-auto">
                 </div>
             </div>
         </div>
@@ -393,7 +393,7 @@
                 </div>
             </div>
 
-            <div class=" col-lg-4  d-flex flex-column">
+            <div class="footer-info col-lg-4  d-flex flex-column">
                 <h4 class="pb-lg-3">Head Office</h4>
                 <div class="p-lg-3">
                     <div class="d-flex flex-row">
@@ -460,6 +460,16 @@
              $(this).addClass("active")
 
          })
+
+         $(".navbar-toggler").click(function (event) {
+                $("#navbarSupportedContent").toggle("show")
+                $(".close-btn").css("display","block")
+            })
+
+            $(".close-btn").click(function (event) {
+                $("#navbarSupportedContent").toggle("show")
+                $(".close-btn").css("display","none")
+            })
 
      })
    </script>
