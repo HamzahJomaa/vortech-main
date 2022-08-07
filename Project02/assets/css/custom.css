@@ -1,3 +1,8 @@
+html, body {
+    max-width: 100% !important;
+    overflow-x: hidden !important;
+}
+
 .dark-blue{
     color:#191970 !important;
 }
@@ -51,6 +56,32 @@
     color: #4870ab;
 }
 
+.item-form{
+    cursor: pointer;
+    background: white !important; ;
+}
+
+.item-form.active{
+    -webkit-box-shadow: 0px 0px 14px -4px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 14px -4px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 14px -4px rgba(0,0,0,0.75);
+}
+
+.item-form:hover{
+    animation: shadow 500ms ease-in-out forwards ;
+}
+
+
+@keyframes shadow {
+    from{
+
+    }
+    to{
+        -webkit-box-shadow: 0px 0px 14px -4px rgba(0,0,0,0.75);
+        -moz-box-shadow: 0px 0px 14px -4px rgba(0,0,0,0.75);
+        box-shadow: 0px 0px 14px -4px rgba(0,0,0,0.75);
+    }
+}
 
 
 

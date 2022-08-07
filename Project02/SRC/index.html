@@ -17,17 +17,15 @@
 </head>
 <body>
 
-    <header class="bg-secondary">
-        <div class="header-section">
-            <div class="dropdown start-90">
-                <button class="btn dropdown-toggle dark-blue fw-bold" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  LANGUAGE
-                </button>
-                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                  <a class="dropdown-item" href="#">English</a>
-                  <a class="dropdown-item" href="#">Arabic</a>
-                  <a class="dropdown-item" href="#">French</a>
-                </div>
+    <header class="bg-secondary w-100 row justify-content-end m-0">
+        <div class="dropdown w-fit">
+            <button class="btn dropdown-toggle dark-blue fw-bold" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                LANGUAGE
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item" href="#">English</a>
+                <a class="dropdown-item" href="#">Arabic</a>
+                <a class="dropdown-item" href="#">French</a>
             </div>
         </div>
     </header>
@@ -43,7 +41,7 @@
             </button>
 
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll w-100 justify-content-around" style="--bs-scroll-height: 100px;">
+                <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll w-100" style="--bs-scroll-height: 100px;">
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle h6 dark-blue fw-bold" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                           HOME
@@ -70,26 +68,26 @@
                           <a class="dropdown-item" href="#">Action</a>
                           <a class="dropdown-item" href="#">Another action</a>
                         </div>
-                      </li>
-                      <li class="nav-item">
+                    </li>
+                    <li class="nav-item">
                         <a class="nav-link active h6 dark-blue fw-bold" href="#">GET QUOTE</a>
                     </li>
-                    <li>
-                        <button class="btn btn-primary text-white rounded fw-bold rounded-radius border-0 px-5" type="button">
-                            SIGN IN
-                        </button>
-                    </li>
-                    <li>
-                        <button class="btn btn-primary  text-white dropdown-toggle fw-bold rounded-radius border-0 px-5" type="button"  data-bs-toggle="dropdown" aria-expanded="false">
-                            SUPPORT
-                        </button>
-                        <ul class="dropdown-menu right-dropdown " aria-labelledby="dropdownMenuButton1">
-                            <li><a class="dropdown-item" href="#">Action</a></li>
-                            <li><a class="dropdown-item" href="#">Another action</a></li>
-                            <li><a class="dropdown-item" href="#">Something else here</a></li>
-                        </ul>
-                    </li>
                 </ul>
+            </div>
+            <div class="right d-grid gap-2 d-md-flex justify-content-md-end">
+                <button class="btn btn-primary text-white rounded fw-bold rounded-radius border-0 px-5" type="button">
+                    SIGN IN
+                </button>
+                <div class="dropdown">
+                    <button class="btn btn-primary  text-white dropdown-toggle fw-bold rounded-radius border-0 px-5" type="button"  data-bs-toggle="dropdown" aria-expanded="false">
+                        SUPPORT
+                    </button>
+                    <ul class="dropdown-menu right-dropdown " aria-labelledby="dropdownMenuButton1">
+                        <li><a class="dropdown-item" href="#">Action</a></li>
+                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    </ul>
+                </div>
             </div>
         </div>
     </nav>
@@ -97,21 +95,21 @@
     <section class="section01 w-100">
         <div class="swiper mySwiper h-100">
             <div class="swiper-wrapper w-100">
-            <div class="swiper-slide mx-auto text-center" style="background: url('../assets/images/banner-img-3.png') #F0F0F0 no-repeat;background-size:cover; background-position:center;">
+            <div class="swiper-slide mx-auto text-center" style="background: url('../assets/images/banner-img-3.png') #F0F0F0 no-repeat;background-size:contain; background-position:center;">
                 <div class="w-40 mx-auto">
-                    <h1 class="text-center">WE GIVE OPPURTUNITIES AT MAXIMUM LOW COST</h1>
+                    <h1 class="text-center">WE GIVE OPPORTUNITIES AT MAXIMUM LOW COST</h1>
                     <button class="btn btn-primary  text-white fw-bold rounded-radius mx-auto mt-3" type="button"> GET A QUOTE</button>
                 </div>
             </div>
-            <div class="swiper-slide mx-auto text-center" style="background: url('../assets/images/banner-img-3.png') #F0F0F0 no-repeat;background-size:cover; background-position:center;">
+            <div class="swiper-slide mx-auto text-center" style="background: url('../assets/images/banner-img-3.png') #F0F0F0 no-repeat;background-size:contain; background-position:center;">
                 <div class="w-40 mx-auto">
-                    <h1 class="text-center">WE GIVE OPPURTUNITIES AT MAXIMUM LOW COST</h1>
+                    <h1 class="text-center">WE GIVE OPPORTUNITIES AT MAXIMUM LOW COST</h1>
                     <button class="btn btn-primary  text-white fw-bold rounded-radius mx-auto mt-3" type="button"> GET A QUOTE</button>
                 </div>
             </div>
-            <div class="swiper-slide mx-auto text-center" style="background: url('../assets/images/banner-img-3.png') #F0F0F0 no-repeat;background-size:cover; background-position:center;">
+            <div class="swiper-slide mx-auto text-center" style="background: url('../assets/images/banner-img-3.png') #F0F0F0 no-repeat;background-size:contain; background-position:center;">
                 <div class="w-40 mx-auto">
-                    <h1 class="text-center">WE GIVE OPPURTUNITIES AT MAXIMUM LOW COST</h1>
+                    <h1 class="text-center">WE GIVE OPPORTUNITIES AT MAXIMUM LOW COST</h1>
                     <button class="btn btn-primary  text-white fw-bold rounded-radius mx-auto mt-3" type="button"> GET A QUOTE</button>
                 </div>
             </div>
@@ -154,73 +152,82 @@
                 <h1 class="fw-bold text-center">
                     GET INSURANCE QUOTE
                 </h1>
-                <div class="d-flex flex-lg-row gap-1 mt-5">
-                    <div class="card rounded-radius d-flex flex-lg-row flex-column col justify-content-center align-items-center">
+
+                <ul class="nav nav-pills mb-3 gap-2" id="pills-tab" role="tablist">
+                    <div data-bs-toggle="pill" data-bs-target="#form01" role="tab" class="nav-link card rounded-radius border-0 d-flex flex-lg-row flex-column col justify-content-center gap-3 align-items-center p-2 item-form active">
                         <div class="card-img w-30">
                             <img src="../assets/images/car.png" alt="" class="w-100">
                         </div>
-                        <div class="card-text w-70 py-1">
-                            <p class="text-primary fw-bold mb-0">CAR</p>
-                            <p class="text-primary">INSURANCE</p>
+                        <div class="card-text">
+                            <p class="text-primary w-fit fw-bold mb-0 lh-base">CAR</p>
+                            <p class="text-primary  w-fit mb-0 lh-base">INSURANCE</p>
                         </div>
                     </div>
-                    <div class="card rounded-radius d-flex flex-lg-row flex-column col justify-content-center align-items-center">
+                    <div data-bs-toggle="pill" data-bs-target="#form02" role="tab" class="nav-link card rounded-radius border-0 d-flex flex-lg-row flex-column col justify-content-center gap-3 align-items-center p-2 item-form ">
                         <div class="card-img w-30">
                             <img src="../assets/images/car.png" alt="" class="w-100">
                         </div>
-                        <div class="card-text w-70 py-1 ">
-                            <p class="text-primary fw-bold mb-0">HOME</p>
-                            <p class="text-primary">INSURANCE</p>
+                        <div class="card-text">
+                            <p class="text-primary w-fit fw-bold mb-0 lh-base">CAR</p>
+                            <p class="text-primary  w-fit mb-0 lh-base">INSURANCE</p>
                         </div>
                     </div>
-                    <div class="card rounded-radius d-flex flex-lg-row flex-column col justify-content-center align-items-center">
+                    <div data-bs-toggle="pill" data-bs-target="#form03" role="tab" class="nav-link card rounded-radius border-0 d-flex flex-lg-row flex-column col justify-content-center gap-3 align-items-center p-2 item-form ">
                         <div class="card-img w-30">
                             <img src="../assets/images/car.png" alt="" class="w-100">
                         </div>
-                        <div class="card-text w-70 py-1">
-                            <p class="text-primary fw-bold mb-0">Travel</p>
-                            <p class="text-primary">INSURANCE</p>
+                        <div class="card-text">
+                            <p class="text-primary w-fit fw-bold mb-0 lh-base">CAR</p>
+                            <p class="text-primary  w-fit mb-0 lh-base">INSURANCE</p>
                         </div>
                     </div>
-                    <div class="card rounded-radius d-flex flex-lg-row flex-column col justify-content-center align-items-center">
+                    <div data-bs-toggle="pill" data-bs-target="#form04" role="tab" class="nav-link card rounded-radius border-0 d-flex flex-lg-row flex-column col justify-content-center gap-3 align-items-center p-2 item-form ">
                         <div class="card-img w-30">
                             <img src="../assets/images/car.png" alt="" class="w-100">
                         </div>
-                        <div class="card-text w-70 py-1">
-                            <p class="text-primary fw-bold mb-0">Medical</p>
-                            <p class="text-primary">INSURANCE</p>
+                        <div class="card-text">
+                            <p class="text-primary w-fit fw-bold mb-0 lh-base">CAR</p>
+                            <p class="text-primary  w-fit mb-0 lh-base">INSURANCE</p>
                         </div>
                     </div>
+                </ul>
+                <div class="tab-content" id="pills-tabContent">
+                    <div class="tab-pane fade show active" id="form01" role="tabpanel" aria-labelledby="pills-home-tab">
+                        <div class="mt-5">
+                            <form>
+                                <div class="row my-3">
+                                    <div class="col">
+                                        <label for="fullName" class="text-primary pb-1">Full Name</label>
+                                        <input type="text" class="form-control bg-transparent border-primary rounded-radius" id="fullName" name="fullName">
+                                    </div>
+                                    <div class="col">
+                                        <label for="email" class="text-primary pb-1">Email</label>
+                                        <input type="email" class="form-control bg-transparent border-primary rounded-radius" id="email" name="email">
+                                    </div>
+                                </div>
+                                <div class="row my-3">
+                                    <div class="col">
+                                        <label for="phoneNumber" class="text-primary pb-1">Phone Number</label>
+                                        <input type="tel" class="form-control bg-transparent border-primary rounded-radius" id="phoneNumber" name="phoneNumber">
+                                    </div>
+                                    <div class="col">
+                                        <label for="age" class="text-primary pb-1">Age</label>
+                                        <input type="number" class="form-control bg-transparent border-primary rounded-radius" id="age" name="age">
+                                    </div>
+                                </div>
+                                <div class="mx-auto m-5 text-center">
+                                    <button class="btn btn-primary text-white fw-bold rounded-radius border-0 w-lg-30 w-50" type="submit">
+                                        GET A QUOTE
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="form02" role="tabpanel" aria-labelledby="pills-profile-tab">Form 2</div>
+                    <div class="tab-pane fade" id="form03" role="tabpanel" aria-labelledby="pills-contact-tab">Form 3</div>
+                    <div class="tab-pane fade" id="form04" role="tabpanel" aria-labelledby="pills-contact-tab">Form 4</div>
                 </div>
-                <div class="mt-5">
-                    <form>
-                        <div class="row my-3">
-                          <div class="col">
-                            <label for="fullName" class="text-primary pb-1">Full Name</label>
-                            <input type="text" class="form-control bg-transparent border-primary rounded-radius" id="fullName" name="fullName">
-                          </div>
-                          <div class="col">
-                            <label for="email" class="text-primary pb-1">Email</label>
-                            <input type="email" class="form-control bg-transparent border-primary rounded-radius" id="email" name="email">
-                          </div>
-                        </div>
-                        <div class="row my-3">
-                            <div class="col">
-                                <label for="phoneNumber" class="text-primary pb-1">Phone Number</label>
-                                <input type="tel" class="form-control bg-transparent border-primary rounded-radius" id="phoneNumber" name="phoneNumber">
-                            </div>
-                            <div class="col">
-                                <label for="age" class="text-primary pb-1">Age</label>
-                                <input type="number" class="form-control bg-transparent border-primary rounded-radius" id="age" name="age">
-                            </div>
-                          </div>
-                          <div class="mx-auto m-5 text-center">
-                                <button class="btn btn-primary text-white fw-bold rounded-radius border-0 w-lg-30 w-50" type="submit">
-                                    GET A QUOTE
-                                </button>
-                           </div>
-                      </form>
-                </div>
+
 
             </div>
 
@@ -447,8 +454,12 @@
 
         })
 
-        
-        swiper.slideNext();
+
+         $(".item-form").click(function () {
+             $(".item-form.active").removeClass("active")
+             $(this).addClass("active")
+
+         })
 
      })
    </script>
