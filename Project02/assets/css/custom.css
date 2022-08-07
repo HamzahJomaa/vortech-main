@@ -71,6 +71,9 @@ html, body {
     animation: shadow 500ms ease-in-out forwards ;
 }
 
+nav img.white{
+    display: none;
+}
 
 @keyframes shadow {
     from{
@@ -110,8 +113,12 @@ footer .links a{
         background-color: #4870ab;
     }
     .navbar-light .navbar-brand{
-        width: 50%;
+        width: 20%;
 
+    }
+    .navbar .navbar-light .container-fluid{
+        display: flex;
+        flex-direction: row;
     }
     nav img.white{
         width: 100%;
@@ -122,6 +129,12 @@ footer .links a{
     }
     nav img.colored{
         display: none;
+    }
+
+    nav .nav-buttons{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
     }
     #dropdownMenuButton1{
         width: 100%;
@@ -142,12 +155,16 @@ footer .links a{
         width: 100% !important;
     }
 
+    .navbar-light{
+        width: 100%;
+    }
     .navbar-light .navbar-toggler{
         border: none;
     }
 
     .navbar-light .navbar-toggler-icon{
         background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'><path stroke='rgba%28255, 255, 255, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/></svg>");
+        
     }
 
     .mySwiper .swiper-slide {
