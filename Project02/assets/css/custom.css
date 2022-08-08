@@ -74,6 +74,9 @@ html, body {
 nav img.white{
     display: none;
 }
+.nav-buttons button{
+    display: none;
+}
 
 @keyframes shadow {
     from{
@@ -108,6 +111,13 @@ footer .links a{
     white-space: nowrap;
 }
 
+
+.input-icon i {
+    color: white;
+    min-width: 50px;
+    text-align: center;
+}
+
 @media only screen and (max-width: 768px) {
     nav{
         background-color: #4870ab;
@@ -131,10 +141,12 @@ footer .links a{
         display: none;
     }
 
-    nav .nav-buttons{
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
+    nav .nav-buttons button{
+        display: block;
+    }
+
+    .nav-buttons-lg button{
+        display: none;
     }
     #dropdownMenuButton1{
         width: 100%;
@@ -165,6 +177,7 @@ footer .links a{
     .navbar-light .navbar-toggler-icon{
         background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'><path stroke='rgba%28255, 255, 255, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/></svg>");
         
+        
     }
 
     .mySwiper .swiper-slide {
@@ -177,7 +190,7 @@ footer .links a{
     .section02 > div > div,
     .section02 > div > h2,
     .section03 > div > div,
-    .section03 .card .card-text,
+    .section03 .card .card-text p,
     .section04 >div>div>div,
     .section04 >div > div> div p,
     .section05 > div ,
