@@ -1,0 +1,14 @@
+.answers .card{
+    width: 300px;
+    height: 300px;
+}
+.content-ol li:before {
+    font-size: 1.2rem;
+}
+
+.question01 .card:hover{
+    background: #D8F1FDff;
+}
+.question-section{
+    border-left: 1px solid gray;
+}
