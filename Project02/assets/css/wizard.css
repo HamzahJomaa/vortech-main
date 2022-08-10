@@ -3,6 +3,16 @@
     height: 300px;
 }
 
+#progressBar{
+    background-color: #497BB0 !important;
+
+}
+.button-primary{
+    background-color: #497BB0;
+    color: white;
+    border: none;
+}
+
 .answers .card.square .card-body{
     display: flex;
     flex-direction: column;
@@ -35,7 +45,7 @@
 }
 
 .border-primary{
-    border: 5px solid #D8F1FDff !important;
+    border: 5px solid #497BB0 !important;
 }
 
 .input-slider input:focus{
@@ -49,4 +59,95 @@
 }
 .question-section{
     border-left: 1px solid gray;
+}
+
+.content-ol li {
+    margin-bottom: 1rem;
+}
+
+
+
+
+/* slider range css */
+.slider-container {
+    position: relative;
+    width: 100%;
+}
+.slider-container .bar {
+    position: absolute;
+    z-index: 1;
+    left: 2px;
+    top: 7px;
+    width: 100%;
+    height: 10px;
+    border-radius: 5px;
+    background-color: lightgray;
+    overflow: hidden;
+}
+
+.slider-container .slider {
+    position: relative;
+    z-index: 2;
+    -webkit-appearance: none;
+    width: 100%;
+    height: 20px;
+    border-radius: 5px;
+    outline: none;
+    background-color: transparent;
+}
+.slider-container .slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 30px;
+    height: 30px;
+    background-color: white;
+    border-radius: 50%;
+    cursor: pointer;
+    outline: none;
+    border: 4px solid #497BB0;
+    box-shadow: 0 0 0 0 rgba(0, 138, 238, .1);
+    transition: .3s ease-in-out;
+}
+
+
+.float-label-field {
+    border: none;
+    outline: none;
+    position: relative;
+    padding: 0;
+    box-sizing: border-box;
+    height: fit-content;
+}
+
+.float-label-field input,.float-label-field.upload-file{
+    border: none;
+    outline: none;
+    width: 100%;
+    font-size: 18px;
+    border: solid 1px #D1D5DB;
+    border-radius: 0.25rem;
+    padding: 0.4rem 0.7rem;
+}
+
+
+.float-label-field label{
+  
+    position: absolute;
+    top: 4px;
+    left: 0px;
+    transition: all 0.2s ease;
+    font-size: 1rem;
+    margin: 0.35rem 0.7rem;
+    background-color: white;
+    font-weight: 100;
+}
+
+.float-label-field.focus label {
+    color: gray;
+}
+
+.float-label-field.float label {
+    opacity: 1;
+    top: -.9rem;
+    font-size: .8rem;
+    transition: all 0.2s ease;
 }
