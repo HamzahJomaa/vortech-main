@@ -1,12 +1,50 @@
-.answers .card{
+.answers .card.square{
     width: 300px;
     height: 300px;
 }
+
+.answers .card.square .card-body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.answers .card.rectangle{
+    width: 100%;
+    height: fit-content;
+}
+
+.answers .card.rectangle .card-body{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.answers .card.rectangle img{
+    width: 20% !important;
+}
+
 .content-ol li:before {
     font-size: 1.2rem;
 }
 
-.question01 .card:hover{
+.active{
+    background: #D8F1FDff;
+}
+
+.border-primary{
+    border: 5px solid #D8F1FDff !important;
+}
+
+.input-slider input:focus{
+    outline: none;
+    box-shadow: none !important;
+}
+
+
+.question01 .card.item:hover{
     background: #D8F1FDff;
 }
 .question-section{
