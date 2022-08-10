@@ -38,6 +38,12 @@ $(document).ready(function() {
 
 
     const updateQuestion = (direction) =>{
+        $("#choices").append(`
+            <div>
+                <h6>${questions[step]?.answerTitle}</h6>
+                <p>${$(".card.item.active").text().trim()}</p>
+            </div>
+        `)
         if (direction == "next")
             step++
         else

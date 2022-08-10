@@ -127,7 +127,26 @@
     border-radius: 0.25rem;
     padding: 0.4rem 0.7rem;
 }
-
+#choices{
+    justify-content: flex-start;
+    padding: 1rem;
+}
+#choices div h6,#choices div p{
+    text-align: center;
+}
+#choices div{
+    padding: 1rem;
+    margin: 0 1rem;
+    width: 10%;
+    height: 100px;
+    background-color: white;
+    display: flex;
+    flex-direction: column ;
+    justify-content: center;
+    align-items: center;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
 
 .float-label-field label{
   
