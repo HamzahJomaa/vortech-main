@@ -1,0 +1,1103 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="../assets/lib/bootstrap-5.0.2/dist/css/bootstrap.min.css"> <!--For Bootstrap Classes-->
+        <link rel="stylesheet" href="../assets/css/custom.css"> <!--For Custom Classes-->
+        <link rel="stylesheet" href="../assets/css/bootstrap.css">  <!--For More Bootstrap Classes-->
+        <link rel="stylesheet" href="../assets/css/wizard.css">
+        <link rel="stylesheet" href="../assets/css/customSlider.css">
+        <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    </head>
+    <body>
+        <section class="p-3">
+            <div class="d-flex justify-content-between">
+                <h4>Insurance</h4>
+                <button class="btn btn-outline-secondary" type="button" >
+                    Login
+                </button>
+            </div>
+        </section>
+        <section style="background: #F4F4F4ff;-webkit-box-shadow: 0px 22px 31px -31px rgba(0,0,0,0.75);-moz-box-shadow: 0px 22px 31px -31px rgba(0,0,0,0.75);box-shadow: 0px 22px 31px -31px rgba(0,0,0,0.75);">
+            <div class="progress">
+                <div class="progress-bar bg-dark" id="progressBar" role="progressbar" style="width: 0%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+            <div class="d-flex flex-row" id="choices">
+
+            </div>
+        </section>
+       
+
+        <section class="mt-5">
+            <div class="w-95 mx-auto">
+                <h6 style=" word-spacing: 10px;">
+                    Hi, <b>"Oneeb Sheikh"</b>,we have found below the best quotations for your <b>Honda City 1.5L Quote reference:</b> :PM/2022/222
+                </h6>
+            </div>
+        </section>
+
+        <section class="w-95 mx-auto mt-5 d-flex flex-row justify-content-between">
+            <div class="insurance-filter w-25 card rounded-radius shadow p-3 mb-5">
+                <div class="card-title d-flex flex-row mt-1 justify-content-between w-90 mx-auto">
+                    <b>Filters</b>
+                    <p>Clear Filters</p>
+                </div>
+                <div class="card-body">
+                    <div class="car-value w-90 mx-auto border-bottom">
+                        <h6 class="text-primary">Car Value</h6>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="CarValue" id="Recommended" value="recommended">
+                            <label class="form-check-label" for="Recommended">
+                              Recommended
+                            </label>
+                          </div>
+                          <div class="form-check">
+                            <input class="form-check-input" type="radio" name="CarValue" id="carValue" value="carValue">
+                            <label class="form-check-label" for="carValue">
+                              Set Your Car Value
+                            </label>
+                          </div>
+                          <div class="carValueAmount rounded-radius w-fit" style="background-color: #6CB4EE;">
+                            <h6 class="text-white p-2">AED ${min}</h6>
+                        </div>
+                          <div class="car-value-slider-container">
+                            <input id="slider" class="slider" type="range" min="${min}" max="${max}" value="${(max - min)/2}">
+                                <span class="bar"><span class="fill"></span></span>
+                            </div>
+                        <div>
+                            <p><i class="text-primary"> Enter the amount between AED 10,000 to AED 100,000</i></p>
+                        </div>
+                    </div>
+
+                    <div class="insurance-plans w-90 mx-auto border-bottom mt-3 pb-3">
+                        <h6 class="text-primary">Insurance Plans</h6>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="insurancePlans" id="allTypes" value="allTypes">
+                            <label class="form-check-label" for="allTypes">
+                              All Types
+                            </label>
+                          </div>
+                          <div class="form-check">
+                            <input class="form-check-input" type="radio" name="insurancePlans" id="comprehensive" value="comprehensive">
+                            <label class="form-check-label" for="comprehensive">
+                              Comprehensive
+                            </label>
+                          </div>
+                          <div class="form-check">
+                            <input class="form-check-input" type="radio" name="insurancePlans" id="thirdPartyLiability" value="thirdPartyLiability">
+                            <label class="form-check-label" for="thirdPartyLiability">
+                              Third Party Liability
+                            </label>
+                          </div>
+                    </div>
+
+                    <div class="repairing-types w-90 mx-auto border-bottom mt-3 pb-3">
+                        <h6 class="text-primary">Repairing Types</h6>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="repairingTypes" id="allTypesRepair" value="allTypesRepair">
+                            <label class="form-check-label" for="allTypesRepair">
+                              All Types
+                            </label>
+                          </div>
+                          <div class="form-check">
+                            <input class="form-check-input" type="radio" name="repairingTypes" id="agency" value="agency">
+                            <label class="form-check-label" for="agency">
+                              Agency
+                            </label>
+                          </div>
+                          <div class="form-check">
+                            <input class="form-check-input" type="radio" name="repairingTypes" id="nonAgency" value="nonAgency">
+                            <label class="form-check-label" for="nonAgency">
+                              Non Agency
+                            </label>
+                          </div>
+                    </div>
+
+                    <div class="insurance-types w-90 mx-auto border-bottom mt-3 pb-3">
+                        <h6 class="text-primary">Insurance Types</h6>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="insuranceTypes" id="allTypesInsurance" value="allTypesInsurance">
+                            <label class="form-check-label" for="allTypesInsurance">
+                              All Types
+                            </label>
+                          </div>
+                          <div class="form-check">
+                            <input class="form-check-input" type="radio" name="insuranceTypes" id="takaful" value="takaful">
+                            <label class="form-check-label" for="takaful">
+                              Takaful
+                            </label>
+                          </div>
+                          <div class="form-check">
+                            <input class="form-check-input" type="radio" name="insuranceTypes" id="nonTakaful" value="nonTakaful">
+                            <label class="form-check-label" for="nonTakaful">
+                              Non Takaful
+                            </label>
+                          </div>
+                    </div>
+
+                    <div class="insurance-companies w-90 mx-auto border-bottom mt-3 pb-3">
+                        <h6 class="text-primary">Insurance Companies</h6>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="insuranceCompanies" id="allTypesCompanies" value="allTypesCompanies">
+                            <label class="form-check-label" for="allTypesCompanies">
+                              All Types
+                            </label>
+                          </div>
+                          <div class="form-check">
+                            <input class="form-check-input" type="radio" name="insuranceCompanies" id="insuranceHouse" value="insuranceHouse">
+                            <label class="form-check-label" for="insuranceHouse">
+                              Insurance House
+                            </label>
+                          </div>
+                          <div class="form-check">
+                            <input class="form-check-input" type="radio" name="insuranceCompanies" id="methaqInsurance" value="methaqInsurance">
+                            <label class="form-check-label" for="methaqInsurance">
+                              Methaq Insurance
+                            </label>
+                          </div>
+                          <div class="form-check">
+                            <input class="form-check-input" type="radio" name="insuranceCompanies" id="amanInsurance" value="amanInsurance">
+                            <label class="form-check-label" for="amanInsurance">
+                              Aman Insurance
+                            </label>
+                          </div>
+                          <div class="form-check">
+                            <input class="form-check-input" type="radio" name="insuranceCompanies" id="adamjeeInsurance" value="adamjeeInsurance">
+                            <label class="form-check-label" for="adamjeeInsurance">
+                              Adamjee Insurance
+                            </label>
+                          </div>
+                          <div class="form-check">
+                            <input class="form-check-input" type="radio" name="insuranceCompanies" id="insurancePlanners" value="insurancePlanners">
+                            <label class="form-check-label" for="insurancePlanners">
+                              Insurance Planners
+                            </label>
+                          </div>
+                    </div>
+
+
+                    <div class="w-90 mx-auto mt-3 pb-3">
+                      <div class="custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input" id="customCheckBox1">
+                        <label class="custom-control-label" for="customCheckBox1">Brand New Car</label>
+                      </div>
+                      <div class="custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input" id="customCheckBox1">
+                        <label class="custom-control-label" for="customCheckBox1">GCC Specification Car</label>
+                      </div>
+                        
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- section 2 -->
+            <div class="insurance-house accordion" style="width: 75%;">
+              <div class="card accordion-item rounded-radius shadow p-3 ms-3 mb-5">
+                <button class="add-to-compare btn btn-primary rounded-radius fw-bold position-absolute top-0 end-0" style="transform: translate(-10%, -45%);">
+                  Add To Compare
+                </button>
+              <div class="w-90 mx-auto d-flex flex-row">
+                  <div class="w-80">
+                    <div class="card-title d-flex flex-row mb-3 w-50 mt-2">
+                        <img src="../assets/images/insurance-palm.png" alt="" class="w-30">
+                        <h4 class="fw-bold align-self-center px-3">Insurance House</h4>
+                    </div>
+                    <div class="card-body d-flex flex-row justify-content-between">
+                        <div class="d-flex flex-row w-30 gap-3 ">
+                          <img src="../assets/images/car-collision.png" alt="" class="w-20 insurance-house-image">
+                          <div>
+                            <h6 class="fw-bold">Third Party Liability</h6>
+                            <p>Up To 2 Million</p>
+                          </div>
+                          <div class="position-relative top-0 start-0">
+                            <img src="../assets/images/info.png" alt="" class="info-image-card w-90">
+                        </div>
+                        </div>
+                        <div class="d-flex flex-row w-30 gap-3">
+                          <img src="../assets/images/repair-tool.png" alt="" class="w-20 insurance-house-image">
+                          <div>
+                            <h6 class="fw-bold">Agency Repair</h6>
+                            <p>Not Included</p>
+                          </div>
+                          <div class="position-relative top-0 start-0">
+                            <img src="../assets/images/info.png" alt="" class="info-image-card w-90">
+                        </div>
+                        </div>
+                        <div class="d-flex flex-row w-30 gap-3">
+                          <img src="../assets/images/repairj-tool.png" alt="" class="w-20 insurance-house-image">
+                          <div>
+                            <h6 class="fw-bold">Excess</h6>
+                            <p>AED 1000</p>
+                          </div>
+                          <div class="position-relative top-0 start-0">
+                            <img src="../assets/images/info.png" alt="" class="info-image-card w-90">
+                        </div>
+                        </div>
+                    </div>
+                  </div>
+
+                  <div class="w-20 text-center mt-3">
+                        <p class="mb-0">Premium Amount</p>
+                        <h3 class="text-primary fw-bold mb-0">AED 456</h3>
+                        <p class="mt-0">Excluded Vat</p>
+                        <button class="btn btn-primary fw-bold rounded-radius w-50">Get Now</button>
+                  </div>
+              </div>
+
+            <div class="accordion-item border-0">
+              <h2 class="accordion-header" id="headingOne">
+                <button class="accordion-button position-absolute end-0 bottom-0 rounded-circle collapsed shadow rounded" 
+                        type="button" data-bs-toggle="collapse" 
+                        data-bs-target="#collapseOne" aria-expanded="true" 
+                        aria-controls="collapseOne"
+                        style="transform: translate(-20%, 50%);">
+          
+                </button>
+              </h2>
+              <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne">
+                <div class="accordion-body">
+                    <div class="accordion-item-title w-50 mx-auto  text-center" >
+                          <h6 class="fw-bold">Coverages & Featues</h6>
+                          <img src="../assets/images/icon2 .png" alt="" class="features-icon">
+                    </div>
+                    <div class="d-flex row w-90 mx-auto mt-5">
+                      <div class="col-6">
+                            <div class="accordion-item-title w-50 mx-auto  mb-5">
+                                <h6 class=" pb-3 text-center fw-bold">Coverage</h6>
+                            </div>
+                            <div class="card-list w-90 mx-auto">
+                            <div class="card-item mb-2">
+                              <div class="bg-secondary row justify-content-between rounded-radius">
+                                  <div class="d-flex flex-row col-11 ">
+                                      <img src="../assets/images/car.png" alt="" class="coverage-car">
+                                      <p class="align-self-center pt-2 px-3">Own Damage Cover</p>
+                                  </div>
+                                  <div class="col-1 mt-2">
+                                     <img src="../assets/images/info.png" alt="" class="w-75 mt-2"> 
+                                  </div>
+                              </div>
+                            </div>
+                            <div class="card-item  mb-2">
+                              <div class="bg-secondary row justify-content-between rounded-radius">
+                                  <div class="d-flex flex-row col-11 ">
+                                      <img src="../assets/images/car.png" alt="" class="coverage-car">
+                                      <p class="align-self-center pt-2 px-3">Own Damage Cover</p>
+                                  </div>
+                                  <div class="col-1 mt-2">
+                                     <img src="../assets/images/info.png" alt="" class="w-75 mt-2"> 
+                                  </div>
+                              </div>
+                            </div>
+                            <div class="card-item mb-2">
+                              <div class="bg-secondary row justify-content-between rounded-radius">
+                                  <div class="d-flex flex-row col-11 ">
+                                      <img src="../assets/images/car.png" alt="" class="coverage-car">
+                                      <p class="align-self-center pt-2 px-3">Own Damage Cover</p>
+                                  </div>
+                                  <div class="col-1 mt-2">
+                                     <img src="../assets/images/info.png" alt="" class="w-75 mt-2"> 
+                                  </div>
+                              </div>
+                            </div>
+                            <div class="card-item mb-2">
+                              <div class="bg-secondary row justify-content-between rounded-radius">
+                                  <div class="d-flex flex-row col-11 ">
+                                      <img src="../assets/images/car.png" alt="" class="coverage-car">
+                                      <p class="align-self-center pt-2 px-3">Own Damage Cover</p>
+                                  </div>
+                                  <div class="col-1 mt-2">
+                                     <img src="../assets/images/info.png" alt="" class="w-75 mt-2"> 
+                                  </div>
+                              </div>
+                            </div>
+                            <div class="card-item mb-2">
+                              <div class="bg-secondary row justify-content-between rounded-radius">
+                                  <div class="d-flex flex-row col-11 ">
+                                      <img src="../assets/images/car.png" alt="" class="coverage-car">
+                                      <p class="align-self-center pt-2 px-3">Own Damage Cover</p>
+                                  </div>
+                                  <div class="col-1 mt-2">
+                                     <img src="../assets/images/info.png" alt="" class="w-75 mt-2"> 
+                                  </div>
+                              </div>
+                            </div>
+                            <div class="card-item mb-2">
+                              <div class="bg-secondary row justify-content-between rounded-radius">
+                                  <div class="d-flex flex-row col-11 ">
+                                      <img src="../assets/images/car.png" alt="" class="coverage-car">
+                                      <p class="align-self-center pt-2 px-3">Own Damage Cover</p>
+                                  </div>
+                                  <div class="col-1 mt-2">
+                                     <img src="../assets/images/info.png" alt="" class="w-75 mt-2"> 
+                                  </div>
+                              </div>
+                            </div>
+                          </div>
+                      </div>
+                      <div class="col-6">
+                        <div class="accordion-item-title w-50 mx-auto mb-5">
+                          <h6 class=" pb-3 text-center fw-bold">Features</h6>
+                        </div>
+                      <div class="card-list w-90 mx-auto">
+                      <div class="card-item mb-2">
+                        <div class="bg-secondary row justify-content-between rounded-radius">
+                            <div class="d-flex flex-row col-11 ">
+                                <img src="../assets/images/car.png" alt="" class="coverage-car">
+                                <p class="align-self-center pt-2 px-3">Own Damage Cover</p>
+                            </div>
+                            <div class="col-1 mt-2">
+                               <img src="../assets/images/info.png" alt="" class="w-75 mt-2"> 
+                            </div>
+                        </div>
+                      </div>
+                      <div class="card-item  mb-2">
+                        <div class="bg-secondary row justify-content-between rounded-radius">
+                            <div class="d-flex flex-row col-11 ">
+                                <img src="../assets/images/car.png" alt="" class="coverage-car">
+                                <p class="align-self-center pt-2 px-3">Own Damage Cover</p>
+                            </div>
+                            <div class="col-1 mt-2">
+                               <img src="../assets/images/info.png" alt="" class="w-75 mt-2"> 
+                            </div>
+                        </div>
+                      </div>
+                      <div class="card-item mb-2">
+                        <div class="bg-secondary row justify-content-between rounded-radius">
+                            <div class="d-flex flex-row col-11 ">
+                                <img src="../assets/images/car.png" alt="" class="coverage-car">
+                                <p class="align-self-center pt-2 px-3">Own Damage Cover</p>
+                            </div>
+                            <div class="col-1 mt-2">
+                               <img src="../assets/images/info.png" alt="" class="w-75 mt-2"> 
+                            </div>
+                        </div>
+                      </div>
+                      <div class="card-item mb-2">
+                        <div class="bg-secondary row justify-content-between rounded-radius">
+                            <div class="d-flex flex-row col-11 ">
+                                <img src="../assets/images/car.png" alt="" class="coverage-car">
+                                <p class="align-self-center pt-2 px-3">Own Damage Cover</p>
+                            </div>
+                            <div class="col-1 mt-2">
+                               <img src="../assets/images/info.png" alt="" class="w-75 mt-2"> 
+                            </div>
+                        </div>
+                      </div>
+                      <div class="card-item mb-2">
+                        <div class="bg-secondary row justify-content-between rounded-radius">
+                            <div class="d-flex flex-row col-11 ">
+                                <img src="../assets/images/car.png" alt="" class="coverage-car">
+                                <p class="align-self-center pt-2 px-3">Own Damage Cover</p>
+                            </div>
+                            <div class="col-1 mt-2">
+                               <img src="../assets/images/info.png" alt="" class="w-75 mt-2"> 
+                            </div>
+                        </div>
+                      </div>
+                      <div class="card-item mb-2">
+                        <div class="bg-secondary row justify-content-between rounded-radius">
+                            <div class="d-flex flex-row col-11 ">
+                                <img src="../assets/images/car.png" alt="" class="coverage-car">
+                                <p class="align-self-center pt-2 px-3">Own Damage Cover</p>
+                            </div>
+                            <div class="col-1 mt-2">
+                               <img src="../assets/images/info.png" alt="" class="w-75 mt-2"> 
+                            </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                    </div>
+                </div>
+              </div>
+            </div>
+            </div>
+            <div class="card accordion-item rounded-radius shadow p-3 ms-3 mb-5">
+              <button class="add-to-compare btn btn-primary rounded-radius fw-bold position-absolute top-0 end-0" style="transform: translate(-10%, -45%);">
+                Add To Compare
+              </button>
+            <div class="w-90 mx-auto d-flex flex-row">
+                <div class="w-80">
+                  <div class="card-title d-flex flex-row mb-3 w-50 mt-2">
+                      <img src="../assets/images/insurance-palm.png" alt="" class="w-30">
+                      <h4 class="fw-bold align-self-center px-3">Insurance House</h4>
+                  </div>
+                  <div class="card-body d-flex flex-row justify-content-between">
+                      <div class="d-flex flex-row w-30 gap-3 ">
+                        <img src="../assets/images/car-collision.png" alt="" class="w-20 insurance-house-image">
+                        <div>
+                          <h6 class="fw-bold">Third Party Liability</h6>
+                          <p>Up To 2 Million</p>
+                        </div>
+                        <div class="position-relative top-0 start-0">
+                          <img src="../assets/images/info.png" alt="" class="info-image-card w-90">
+                      </div>
+                      </div>
+                      <div class="d-flex flex-row w-30 gap-3">
+                        <img src="../assets/images/repair-tool.png" alt="" class="w-20 insurance-house-image">
+                        <div>
+                          <h6 class="fw-bold">Agency Repair</h6>
+                          <p>Not Included</p>
+                        </div>
+                        <div class="position-relative top-0 start-0">
+                          <img src="../assets/images/info.png" alt="" class="info-image-card w-90">
+                      </div>
+                      </div>
+                      <div class="d-flex flex-row w-30 gap-3">
+                        <img src="../assets/images/repairj-tool.png" alt="" class="w-20 insurance-house-image">
+                        <div>
+                          <h6 class="fw-bold">Excess</h6>
+                          <p>AED 1000</p>
+                        </div>
+                        <div class="position-relative top-0 start-0">
+                          <img src="../assets/images/info.png" alt="" class="info-image-card w-90">
+                      </div>
+                      </div>
+                  </div>
+                </div>
+
+                <div class="w-20 text-center mt-3">
+                      <p class="mb-0">Premium Amount</p>
+                      <h3 class="text-primary fw-bold mb-0">AED 456</h3>
+                      <p class="mt-0">Excluded Vat</p>
+                      <button class="btn btn-primary fw-bold rounded-radius w-50">Get Now</button>
+                </div>
+            </div>
+
+          <div class="accordion-item border-0">
+            <h2 class="accordion-header" id="headingTwo">
+              <button class="accordion-button position-absolute end-0 bottom-0 rounded-circle collapsed shadow rounded" 
+                      type="button" data-bs-toggle="collapse" 
+                      data-bs-target="#collapseTwo" aria-expanded="true" 
+                      aria-controls="collapseTwo"
+                      style="transform: translate(-20%, 50%);">
+        
+              </button>
+            </h2>
+            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo">
+              <div class="accordion-body">
+                  <div class="accordion-item-title w-50 mx-auto  text-center" >
+                        <h6 class="fw-bold">Coverages & Featues</h6>
+                        <img src="../assets/images/icon2 .png" alt="" class="features-icon">
+                  </div>
+                  <div class="d-flex row w-90 mx-auto mt-5">
+                    <div class="col-6">
+                          <div class="accordion-item-title w-50 mx-auto  mb-5">
+                              <h6 class=" pb-3 text-center fw-bold">Coverage</h6>
+                          </div>
+                          <div class="card-list w-90 mx-auto">
+                          <div class="card-item mb-2">
+                            <div class="bg-secondary row justify-content-between rounded-radius">
+                                <div class="d-flex flex-row col-11 ">
+                                    <img src="../assets/images/car.png" alt="" class="coverage-car">
+                                    <p class="align-self-center pt-2 px-3">Own Damage Cover</p>
+                                </div>
+                                <div class="col-1 mt-2">
+                                   <img src="../assets/images/info.png" alt="" class="w-75 mt-2"> 
+                                </div>
+                            </div>
+                          </div>
+                          <div class="card-item  mb-2">
+                            <div class="bg-secondary row justify-content-between rounded-radius">
+                                <div class="d-flex flex-row col-11 ">
+                                    <img src="../assets/images/car.png" alt="" class="coverage-car">
+                                    <p class="align-self-center pt-2 px-3">Own Damage Cover</p>
+                                </div>
+                                <div class="col-1 mt-2">
+                                   <img src="../assets/images/info.png" alt="" class="w-75 mt-2"> 
+                                </div>
+                            </div>
+                          </div>
+                          <div class="card-item mb-2">
+                            <div class="bg-secondary row justify-content-between rounded-radius">
+                                <div class="d-flex flex-row col-11 ">
+                                    <img src="../assets/images/car.png" alt="" class="coverage-car">
+                                    <p class="align-self-center pt-2 px-3">Own Damage Cover</p>
+                                </div>
+                                <div class="col-1 mt-2">
+                                   <img src="../assets/images/info.png" alt="" class="w-75 mt-2"> 
+                                </div>
+                            </div>
+                          </div>
+                          <div class="card-item mb-2">
+                            <div class="bg-secondary row justify-content-between rounded-radius">
+                                <div class="d-flex flex-row col-11 ">
+                                    <img src="../assets/images/car.png" alt="" class="coverage-car">
+                                    <p class="align-self-center pt-2 px-3">Own Damage Cover</p>
+                                </div>
+                                <div class="col-1 mt-2">
+                                   <img src="../assets/images/info.png" alt="" class="w-75 mt-2"> 
+                                </div>
+                            </div>
+                          </div>
+                          <div class="card-item mb-2">
+                            <div class="bg-secondary row justify-content-between rounded-radius">
+                                <div class="d-flex flex-row col-11 ">
+                                    <img src="../assets/images/car.png" alt="" class="coverage-car">
+                                    <p class="align-self-center pt-2 px-3">Own Damage Cover</p>
+                                </div>
+                                <div class="col-1 mt-2">
+                                   <img src="../assets/images/info.png" alt="" class="w-75 mt-2"> 
+                                </div>
+                            </div>
+                          </div>
+                          <div class="card-item mb-2">
+                            <div class="bg-secondary row justify-content-between rounded-radius">
+                                <div class="d-flex flex-row col-11 ">
+                                    <img src="../assets/images/car.png" alt="" class="coverage-car">
+                                    <p class="align-self-center pt-2 px-3">Own Damage Cover</p>
+                                </div>
+                                <div class="col-1 mt-2">
+                                   <img src="../assets/images/info.png" alt="" class="w-75 mt-2"> 
+                                </div>
+                            </div>
+                          </div>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                      <div class="accordion-item-title w-50 mx-auto mb-5">
+                        <h6 class=" pb-3 text-center fw-bold">Features</h6>
+                      </div>
+                    <div class="card-list w-90 mx-auto">
+                    <div class="card-item mb-2">
+                      <div class="bg-secondary row justify-content-between rounded-radius">
+                          <div class="d-flex flex-row col-11 ">
+                              <img src="../assets/images/car.png" alt="" class="coverage-car">
+                              <p class="align-self-center pt-2 px-3">Own Damage Cover</p>
+                          </div>
+                          <div class="col-1 mt-2">
+                             <img src="../assets/images/info.png" alt="" class="w-75 mt-2"> 
+                          </div>
+                      </div>
+                    </div>
+                    <div class="card-item  mb-2">
+                      <div class="bg-secondary row justify-content-between rounded-radius">
+                          <div class="d-flex flex-row col-11 ">
+                              <img src="../assets/images/car.png" alt="" class="coverage-car">
+                              <p class="align-self-center pt-2 px-3">Own Damage Cover</p>
+                          </div>
+                          <div class="col-1 mt-2">
+                             <img src="../assets/images/info.png" alt="" class="w-75 mt-2"> 
+                          </div>
+                      </div>
+                    </div>
+                    <div class="card-item mb-2">
+                      <div class="bg-secondary row justify-content-between rounded-radius">
+                          <div class="d-flex flex-row col-11 ">
+                              <img src="../assets/images/car.png" alt="" class="coverage-car">
+                              <p class="align-self-center pt-2 px-3">Own Damage Cover</p>
+                          </div>
+                          <div class="col-1 mt-2">
+                             <img src="../assets/images/info.png" alt="" class="w-75 mt-2"> 
+                          </div>
+                      </div>
+                    </div>
+                    <div class="card-item mb-2">
+                      <div class="bg-secondary row justify-content-between rounded-radius">
+                          <div class="d-flex flex-row col-11 ">
+                              <img src="../assets/images/car.png" alt="" class="coverage-car">
+                              <p class="align-self-center pt-2 px-3">Own Damage Cover</p>
+                          </div>
+                          <div class="col-1 mt-2">
+                             <img src="../assets/images/info.png" alt="" class="w-75 mt-2"> 
+                          </div>
+                      </div>
+                    </div>
+                    <div class="card-item mb-2">
+                      <div class="bg-secondary row justify-content-between rounded-radius">
+                          <div class="d-flex flex-row col-11 ">
+                              <img src="../assets/images/car.png" alt="" class="coverage-car">
+                              <p class="align-self-center pt-2 px-3">Own Damage Cover</p>
+                          </div>
+                          <div class="col-1 mt-2">
+                             <img src="../assets/images/info.png" alt="" class="w-75 mt-2"> 
+                          </div>
+                      </div>
+                    </div>
+                    <div class="card-item mb-2">
+                      <div class="bg-secondary row justify-content-between rounded-radius">
+                          <div class="d-flex flex-row col-11 ">
+                              <img src="../assets/images/car.png" alt="" class="coverage-car">
+                              <p class="align-self-center pt-2 px-3">Own Damage Cover</p>
+                          </div>
+                          <div class="col-1 mt-2">
+                             <img src="../assets/images/info.png" alt="" class="w-75 mt-2"> 
+                          </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                  </div>
+              </div>
+            </div>
+          </div>
+          </div>
+          <div class="card accordion-item rounded-radius shadow p-3 ms-3 mb-5">
+            <button class="add-to-compare btn btn-primary rounded-radius fw-bold position-absolute top-0 end-0" style="transform: translate(-10%, -45%);">
+              Add To Compare
+            </button>
+          <div class="w-90 mx-auto d-flex flex-row">
+              <div class="w-80">
+                <div class="card-title d-flex flex-row mb-3 w-50 mt-2">
+                    <img src="../assets/images/insurance-palm.png" alt="" class="w-30">
+                    <h4 class="fw-bold align-self-center px-3">Insurance House</h4>
+                </div>
+                <div class="card-body d-flex flex-row justify-content-between">
+                    <div class="d-flex flex-row w-30 gap-3 ">
+                      <img src="../assets/images/car-collision.png" alt="" class="w-20 insurance-house-image">
+                      <div>
+                        <h6 class="fw-bold">Third Party Liability</h6>
+                        <p>Up To 2 Million</p>
+                      </div>
+                      <div class="position-relative top-0 start-0">
+                        <img src="../assets/images/info.png" alt="" class="info-image-card w-90">
+                    </div>
+                    </div>
+                    <div class="d-flex flex-row w-30 gap-3">
+                      <img src="../assets/images/repair-tool.png" alt="" class="w-20 insurance-house-image">
+                      <div>
+                        <h6 class="fw-bold">Agency Repair</h6>
+                        <p>Not Included</p>
+                      </div>
+                      <div class="position-relative top-0 start-0">
+                        <img src="../assets/images/info.png" alt="" class="info-image-card w-90">
+                    </div>
+                    </div>
+                    <div class="d-flex flex-row w-30 gap-3">
+                      <img src="../assets/images/repairj-tool.png" alt="" class="w-20 insurance-house-image">
+                      <div>
+                        <h6 class="fw-bold">Excess</h6>
+                        <p>AED 1000</p>
+                      </div>
+                      <div class="position-relative top-0 start-0">
+                        <img src="../assets/images/info.png" alt="" class="info-image-card w-90">
+                    </div>
+                    </div>
+                </div>
+              </div>
+
+              <div class="w-20 text-center mt-3">
+                    <p class="mb-0">Premium Amount</p>
+                    <h3 class="text-primary fw-bold mb-0">AED 456</h3>
+                    <p class="mt-0">Excluded Vat</p>
+                    <button class="btn btn-primary fw-bold rounded-radius w-50">Get Now</button>
+              </div>
+          </div>
+
+        <div class="accordion-item border-0">
+          <h2 class="accordion-header" id="headingThree">
+            <button class="accordion-button position-absolute end-0 bottom-0 rounded-circle collapsed shadow rounded" 
+                    type="button" data-bs-toggle="collapse" 
+                    data-bs-target="#collapseThree" aria-expanded="true" 
+                    aria-controls="collapseThree"
+                    style="transform: translate(-20%, 50%);">
+      
+            </button>
+          </h2>
+          <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree">
+            <div class="accordion-body">
+                <div class="accordion-item-title w-50 mx-auto  text-center" >
+                      <h6 class="fw-bold">Coverages & Featues</h6>
+                      <img src="../assets/images/icon2 .png" alt="" class="features-icon">
+                </div>
+                <div class="d-flex row w-90 mx-auto mt-5">
+                  <div class="col-6">
+                        <div class="accordion-item-title w-50 mx-auto  mb-5">
+                            <h6 class=" pb-3 text-center fw-bold">Coverage</h6>
+                        </div>
+                        <div class="card-list w-90 mx-auto">
+                        <div class="card-item mb-2">
+                          <div class="bg-secondary row justify-content-between rounded-radius">
+                              <div class="d-flex flex-row col-11 ">
+                                  <img src="../assets/images/car.png" alt="" class="coverage-car">
+                                  <p class="align-self-center pt-2 px-3">Own Damage Cover</p>
+                              </div>
+                              <div class="col-1 mt-2">
+                                 <img src="../assets/images/info.png" alt="" class="w-75 mt-2"> 
+                              </div>
+                          </div>
+                        </div>
+                        <div class="card-item  mb-2">
+                          <div class="bg-secondary row justify-content-between rounded-radius">
+                              <div class="d-flex flex-row col-11 ">
+                                  <img src="../assets/images/car.png" alt="" class="coverage-car">
+                                  <p class="align-self-center pt-2 px-3">Own Damage Cover</p>
+                              </div>
+                              <div class="col-1 mt-2">
+                                 <img src="../assets/images/info.png" alt="" class="w-75 mt-2"> 
+                              </div>
+                          </div>
+                        </div>
+                        <div class="card-item mb-2">
+                          <div class="bg-secondary row justify-content-between rounded-radius">
+                              <div class="d-flex flex-row col-11 ">
+                                  <img src="../assets/images/car.png" alt="" class="coverage-car">
+                                  <p class="align-self-center pt-2 px-3">Own Damage Cover</p>
+                              </div>
+                              <div class="col-1 mt-2">
+                                 <img src="../assets/images/info.png" alt="" class="w-75 mt-2"> 
+                              </div>
+                          </div>
+                        </div>
+                        <div class="card-item mb-2">
+                          <div class="bg-secondary row justify-content-between rounded-radius">
+                              <div class="d-flex flex-row col-11 ">
+                                  <img src="../assets/images/car.png" alt="" class="coverage-car">
+                                  <p class="align-self-center pt-2 px-3">Own Damage Cover</p>
+                              </div>
+                              <div class="col-1 mt-2">
+                                 <img src="../assets/images/info.png" alt="" class="w-75 mt-2"> 
+                              </div>
+                          </div>
+                        </div>
+                        <div class="card-item mb-2">
+                          <div class="bg-secondary row justify-content-between rounded-radius">
+                              <div class="d-flex flex-row col-11 ">
+                                  <img src="../assets/images/car.png" alt="" class="coverage-car">
+                                  <p class="align-self-center pt-2 px-3">Own Damage Cover</p>
+                              </div>
+                              <div class="col-1 mt-2">
+                                 <img src="../assets/images/info.png" alt="" class="w-75 mt-2"> 
+                              </div>
+                          </div>
+                        </div>
+                        <div class="card-item mb-2">
+                          <div class="bg-secondary row justify-content-between rounded-radius">
+                              <div class="d-flex flex-row col-11 ">
+                                  <img src="../assets/images/car.png" alt="" class="coverage-car">
+                                  <p class="align-self-center pt-2 px-3">Own Damage Cover</p>
+                              </div>
+                              <div class="col-1 mt-2">
+                                 <img src="../assets/images/info.png" alt="" class="w-75 mt-2"> 
+                              </div>
+                          </div>
+                        </div>
+                      </div>
+                  </div>
+                  <div class="col-6">
+                    <div class="accordion-item-title w-50 mx-auto mb-5">
+                      <h6 class=" pb-3 text-center fw-bold">Features</h6>
+                    </div>
+                  <div class="card-list w-90 mx-auto">
+                  <div class="card-item mb-2">
+                    <div class="bg-secondary row justify-content-between rounded-radius">
+                        <div class="d-flex flex-row col-11 ">
+                            <img src="../assets/images/car.png" alt="" class="coverage-car">
+                            <p class="align-self-center pt-2 px-3">Own Damage Cover</p>
+                        </div>
+                        <div class="col-1 mt-2">
+                           <img src="../assets/images/info.png" alt="" class="w-75 mt-2"> 
+                        </div>
+                    </div>
+                  </div>
+                  <div class="card-item  mb-2">
+                    <div class="bg-secondary row justify-content-between rounded-radius">
+                        <div class="d-flex flex-row col-11 ">
+                            <img src="../assets/images/car.png" alt="" class="coverage-car">
+                            <p class="align-self-center pt-2 px-3">Own Damage Cover</p>
+                        </div>
+                        <div class="col-1 mt-2">
+                           <img src="../assets/images/info.png" alt="" class="w-75 mt-2"> 
+                        </div>
+                    </div>
+                  </div>
+                  <div class="card-item mb-2">
+                    <div class="bg-secondary row justify-content-between rounded-radius">
+                        <div class="d-flex flex-row col-11 ">
+                            <img src="../assets/images/car.png" alt="" class="coverage-car">
+                            <p class="align-self-center pt-2 px-3">Own Damage Cover</p>
+                        </div>
+                        <div class="col-1 mt-2">
+                           <img src="../assets/images/info.png" alt="" class="w-75 mt-2"> 
+                        </div>
+                    </div>
+                  </div>
+                  <div class="card-item mb-2">
+                    <div class="bg-secondary row justify-content-between rounded-radius">
+                        <div class="d-flex flex-row col-11 ">
+                            <img src="../assets/images/car.png" alt="" class="coverage-car">
+                            <p class="align-self-center pt-2 px-3">Own Damage Cover</p>
+                        </div>
+                        <div class="col-1 mt-2">
+                           <img src="../assets/images/info.png" alt="" class="w-75 mt-2"> 
+                        </div>
+                    </div>
+                  </div>
+                  <div class="card-item mb-2">
+                    <div class="bg-secondary row justify-content-between rounded-radius">
+                        <div class="d-flex flex-row col-11 ">
+                            <img src="../assets/images/car.png" alt="" class="coverage-car">
+                            <p class="align-self-center pt-2 px-3">Own Damage Cover</p>
+                        </div>
+                        <div class="col-1 mt-2">
+                           <img src="../assets/images/info.png" alt="" class="w-75 mt-2"> 
+                        </div>
+                    </div>
+                  </div>
+                  <div class="card-item mb-2">
+                    <div class="bg-secondary row justify-content-between rounded-radius">
+                        <div class="d-flex flex-row col-11 ">
+                            <img src="../assets/images/car.png" alt="" class="coverage-car">
+                            <p class="align-self-center pt-2 px-3">Own Damage Cover</p>
+                        </div>
+                        <div class="col-1 mt-2">
+                           <img src="../assets/images/info.png" alt="" class="w-75 mt-2"> 
+                        </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+                </div>
+            </div>
+          </div>
+        </div>
+        </div>
+        <div class="card accordion-item rounded-radius shadow p-3 ms-3 mb-5">
+          <button class="add-to-compare btn btn-primary rounded-radius fw-bold position-absolute top-0 end-0" style="transform: translate(-10%, -45%);">
+            Add To Compare
+          </button>
+        <div class="w-90 mx-auto d-flex flex-row">
+            <div class="w-80">
+              <div class="card-title d-flex flex-row mb-3 w-50 mt-2">
+                  <img src="../assets/images/insurance-palm.png" alt="" class="w-30">
+                  <h4 class="fw-bold align-self-center px-3">Insurance House</h4>
+              </div>
+              <div class="card-body d-flex flex-row justify-content-between">
+                  <div class="d-flex flex-row w-30 gap-3 ">
+                    <img src="../assets/images/car-collision.png" alt="" class="w-20 insurance-house-image">
+                    <div>
+                      <h6 class="fw-bold">Third Party Liability</h6>
+                      <p>Up To 2 Million</p>
+                    </div>
+                    <div class="position-relative top-0 start-0">
+                      <img src="../assets/images/info.png" alt="" class="info-image-card w-90">
+                  </div>
+                  </div>
+                  <div class="d-flex flex-row w-30 gap-3">
+                    <img src="../assets/images/repair-tool.png" alt="" class="w-20 insurance-house-image">
+                    <div>
+                      <h6 class="fw-bold">Agency Repair</h6>
+                      <p>Not Included</p>
+                    </div>
+                    <div class="position-relative top-0 start-0">
+                      <img src="../assets/images/info.png" alt="" class="info-image-card w-90">
+                  </div>
+                  </div>
+                  <div class="d-flex flex-row w-30 gap-3">
+                    <img src="../assets/images/repairj-tool.png" alt="" class="w-20 insurance-house-image">
+                    <div>
+                      <h6 class="fw-bold">Excess</h6>
+                      <p>AED 1000</p>
+                    </div>
+                    <div class="position-relative top-0 start-0">
+                      <img src="../assets/images/info.png" alt="" class="info-image-card w-90">
+                  </div>
+                  </div>
+              </div>
+            </div>
+
+            <div class="w-20 text-center mt-3">
+                  <p class="mb-0">Premium Amount</p>
+                  <h3 class="text-primary fw-bold mb-0">AED 456</h3>
+                  <p class="mt-0">Excluded Vat</p>
+                  <button class="btn btn-primary fw-bold rounded-radius w-50">Get Now</button>
+            </div>
+        </div>
+
+      <div class="accordion-item border-0">
+        <h2 class="accordion-header" id="headingFour">
+          <button class="accordion-button position-absolute end-0 bottom-0 rounded-circle collapsed shadow rounded" 
+                  type="button" data-bs-toggle="collapse" 
+                  data-bs-target="#collapseFour" aria-expanded="true" 
+                  aria-controls="collapseFour"
+                  style="transform: translate(-20%, 50%);">
+    
+          </button>
+        </h2>
+        <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour">
+          <div class="accordion-body">
+              <div class="accordion-item-title w-50 mx-auto  text-center" >
+                    <h6 class="fw-bold">Coverages & Featues</h6>
+                    <img src="../assets/images/icon2 .png" alt="" class="features-icon">
+              </div>
+              <div class="d-flex row w-90 mx-auto mt-5">
+                <div class="col-6">
+                      <div class="accordion-item-title w-50 mx-auto  mb-5">
+                          <h6 class=" pb-3 text-center fw-bold">Coverage</h6>
+                      </div>
+                      <div class="card-list w-90 mx-auto">
+                      <div class="card-item mb-2">
+                        <div class="bg-secondary row justify-content-between rounded-radius">
+                            <div class="d-flex flex-row col-11 ">
+                                <img src="../assets/images/car.png" alt="" class="coverage-car">
+                                <p class="align-self-center pt-2 px-3">Own Damage Cover</p>
+                            </div>
+                            <div class="col-1 mt-2">
+                               <img src="../assets/images/info.png" alt="" class="w-75 mt-2"> 
+                            </div>
+                        </div>
+                      </div>
+                      <div class="card-item  mb-2">
+                        <div class="bg-secondary row justify-content-between rounded-radius">
+                            <div class="d-flex flex-row col-11 ">
+                                <img src="../assets/images/car.png" alt="" class="coverage-car">
+                                <p class="align-self-center pt-2 px-3">Own Damage Cover</p>
+                            </div>
+                            <div class="col-1 mt-2">
+                               <img src="../assets/images/info.png" alt="" class="w-75 mt-2"> 
+                            </div>
+                        </div>
+                      </div>
+                      <div class="card-item mb-2">
+                        <div class="bg-secondary row justify-content-between rounded-radius">
+                            <div class="d-flex flex-row col-11 ">
+                                <img src="../assets/images/car.png" alt="" class="coverage-car">
+                                <p class="align-self-center pt-2 px-3">Own Damage Cover</p>
+                            </div>
+                            <div class="col-1 mt-2">
+                               <img src="../assets/images/info.png" alt="" class="w-75 mt-2"> 
+                            </div>
+                        </div>
+                      </div>
+                      <div class="card-item mb-2">
+                        <div class="bg-secondary row justify-content-between rounded-radius">
+                            <div class="d-flex flex-row col-11 ">
+                                <img src="../assets/images/car.png" alt="" class="coverage-car">
+                                <p class="align-self-center pt-2 px-3">Own Damage Cover</p>
+                            </div>
+                            <div class="col-1 mt-2">
+                               <img src="../assets/images/info.png" alt="" class="w-75 mt-2"> 
+                            </div>
+                        </div>
+                      </div>
+                      <div class="card-item mb-2">
+                        <div class="bg-secondary row justify-content-between rounded-radius">
+                            <div class="d-flex flex-row col-11 ">
+                                <img src="../assets/images/car.png" alt="" class="coverage-car">
+                                <p class="align-self-center pt-2 px-3">Own Damage Cover</p>
+                            </div>
+                            <div class="col-1 mt-2">
+                               <img src="../assets/images/info.png" alt="" class="w-75 mt-2"> 
+                            </div>
+                        </div>
+                      </div>
+                      <div class="card-item mb-2">
+                        <div class="bg-secondary row justify-content-between rounded-radius">
+                            <div class="d-flex flex-row col-11 ">
+                                <img src="../assets/images/car.png" alt="" class="coverage-car">
+                                <p class="align-self-center pt-2 px-3">Own Damage Cover</p>
+                            </div>
+                            <div class="col-1 mt-2">
+                               <img src="../assets/images/info.png" alt="" class="w-75 mt-2"> 
+                            </div>
+                        </div>
+                      </div>
+                    </div>
+                </div>
+                <div class="col-6">
+                  <div class="accordion-item-title w-50 mx-auto mb-5">
+                    <h6 class=" pb-3 text-center fw-bold">Features</h6>
+                  </div>
+                <div class="card-list w-90 mx-auto">
+                <div class="card-item mb-2">
+                  <div class="bg-secondary row justify-content-between rounded-radius">
+                      <div class="d-flex flex-row col-11 ">
+                          <img src="../assets/images/car.png" alt="" class="coverage-car">
+                          <p class="align-self-center pt-2 px-3">Own Damage Cover</p>
+                      </div>
+                      <div class="col-1 mt-2">
+                         <img src="../assets/images/info.png" alt="" class="w-75 mt-2"> 
+                      </div>
+                  </div>
+                </div>
+                <div class="card-item  mb-2">
+                  <div class="bg-secondary row justify-content-between rounded-radius">
+                      <div class="d-flex flex-row col-11 ">
+                          <img src="../assets/images/car.png" alt="" class="coverage-car">
+                          <p class="align-self-center pt-2 px-3">Own Damage Cover</p>
+                      </div>
+                      <div class="col-1 mt-2">
+                         <img src="../assets/images/info.png" alt="" class="w-75 mt-2"> 
+                      </div>
+                  </div>
+                </div>
+                <div class="card-item mb-2">
+                  <div class="bg-secondary row justify-content-between rounded-radius">
+                      <div class="d-flex flex-row col-11 ">
+                          <img src="../assets/images/car.png" alt="" class="coverage-car">
+                          <p class="align-self-center pt-2 px-3">Own Damage Cover</p>
+                      </div>
+                      <div class="col-1 mt-2">
+                         <img src="../assets/images/info.png" alt="" class="w-75 mt-2"> 
+                      </div>
+                  </div>
+                </div>
+                <div class="card-item mb-2">
+                  <div class="bg-secondary row justify-content-between rounded-radius">
+                      <div class="d-flex flex-row col-11 ">
+                          <img src="../assets/images/car.png" alt="" class="coverage-car">
+                          <p class="align-self-center pt-2 px-3">Own Damage Cover</p>
+                      </div>
+                      <div class="col-1 mt-2">
+                         <img src="../assets/images/info.png" alt="" class="w-75 mt-2"> 
+                      </div>
+                  </div>
+                </div>
+                <div class="card-item mb-2">
+                  <div class="bg-secondary row justify-content-between rounded-radius">
+                      <div class="d-flex flex-row col-11 ">
+                          <img src="../assets/images/car.png" alt="" class="coverage-car">
+                          <p class="align-self-center pt-2 px-3">Own Damage Cover</p>
+                      </div>
+                      <div class="col-1 mt-2">
+                         <img src="../assets/images/info.png" alt="" class="w-75 mt-2"> 
+                      </div>
+                  </div>
+                </div>
+                <div class="card-item mb-2">
+                  <div class="bg-secondary row justify-content-between rounded-radius">
+                      <div class="d-flex flex-row col-11 ">
+                          <img src="../assets/images/car.png" alt="" class="coverage-car">
+                          <p class="align-self-center pt-2 px-3">Own Damage Cover</p>
+                      </div>
+                      <div class="col-1 mt-2">
+                         <img src="../assets/images/info.png" alt="" class="w-75 mt-2"> 
+                      </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+              </div>
+          </div>
+        </div>
+      </div>
+      </div>
+            
+            
+            
+            </div>
+        </section>
+
+
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+
+       
+
+    </body>
+</html>
