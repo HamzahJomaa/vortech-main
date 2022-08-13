@@ -11,7 +11,7 @@
     width: 100%;
     height: 10px;
     border-radius: 5px;
-    background-color: #6bb0f09c;
+    background-color: #f1f1f1;
     overflow: hidden;
 }
 .car-value-slider-container .bar .fill {
@@ -34,16 +34,18 @@
     -webkit-appearance: none;
     width: 20px;
     height: 20px;
-    background-color: #008AEE;
+    background-color: white;
     border-radius: 50%;
     cursor: pointer;
     outline: none;
+    border: solid 2.5px #008AEE ;
     box-shadow: 0 0 0 0 rgba(0, 138, 238, .1);
     transition: .3s ease-in-out;
 }
-.car-value-slider-container .slider::-webkit-slider-thumb:hover {
+
+/* .car-value-slider-container .slider::-webkit-slider-thumb:hover {
     box-shadow: 0 0 0 5px rgba(0, 138, 238, .1);
 }
 .car-value-slider-container .slider:active::-webkit-slider-thumb {
     box-shadow: 0 0 0 40px rgba(0, 138, 238, .2);
-}
+} */

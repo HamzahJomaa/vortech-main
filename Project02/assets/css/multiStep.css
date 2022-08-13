@@ -116,10 +116,12 @@
     /* color: white; */
 }
 
-#progressbar li.active #uploadDocuments:before,#progressbar li.active #uploadDocuments:after{
-    background-image: url('../images/uplaod-copy.png');
+#progressbar li:nth-child(3):before{
+    content: '';
+    background-image: url('../images/uplaod.png');
     background-repeat: no-repeat;
     background-position: center;
     background-size: 70%;
+    background-color: #4870ab;
 }
 
