@@ -64,6 +64,29 @@
     width: 20% !important;
 }
 
+#boxes-rectangle{
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+#rectangle{
+    display: grid;
+    grid-template-columns: auto;
+}
+
+#dynamic-form > div.select-form {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-gap: 2rem;
+}
+
+div.form-selected{
+    margin: 1rem 0;
+    gap: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
 .content-ol li:before {
     font-size: 1.2rem;
 }
@@ -100,6 +123,7 @@
 .slider-container {
     position: relative;
     width: 100%;
+    margin-top: 1rem;
 }
 .slider-container .bar {
     position: absolute;

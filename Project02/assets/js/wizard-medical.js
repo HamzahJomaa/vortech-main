@@ -1,5 +1,8 @@
 $(document).ready(function() {
     $("body").on("click",".card.item",function(){
+        if (questions[step].type === 'dynamic-form'){
+            alert($(this).text().trim())
+        }
         let checkActive = $(".card.item.active");
         checkActive.toggleClass("active");
         $(this).toggleClass("active");
@@ -8,14 +11,13 @@ $(document).ready(function() {
     // Update Slider Upon Input Change
     $("body").on("keyup", "#progress-price", function() {
         $(".bar .fill").css("width", `${($(this).val() / ($("#slider").attr("max")-$("#slider").attr("min")))*100}%`);
-
         $("#slider").val($(this).val())
     })
 
     // Update Input Upon Slider Change
     $("body").on("input", "#slider", function() {
         $(".bar .fill").css("width", `${($("#slider").val() / ($("#slider").attr("max")-$("#slider").attr("min")))*100}%`);
-        $("#progress-price").val($(this).val())
+        $("#progress-price:first-child").val($(this).val())
     })
 
     let step = 0
@@ -24,26 +26,22 @@ $(document).ready(function() {
     $("#titleQuestion").text(questions[step].question)
     $(".answers.section").css("gap", "1rem")
 
-    $(".answers.section").css("display", "grid")
-    $(".answers.section").css("grid-template-columns", "auto auto")
 
 
+    $(".answers.section").attr("id",questions[step].type)
     questions[step].answers.map((item, index) => {
         $(".answers.section").append(`
-        <div class="card ${questions[step].type} item">
-            <div class="card-body shaddow">
+        <div class="card ${questions[step].type} item shadow-sm">
+            <div class="card-body">
                 <h4 class="w-fit">${item.value}</h4>
             </div>
-        </div>
-        `)
+        </div>`)
     })
 
 
     const updateQuestion = (direction) =>{
-
         if (direction == "next"){
             step++
-
             $("#choices").append(`
                 <div>
                     <h6>${questions[step]?.answerTitle}</h6>
@@ -56,54 +54,90 @@ $(document).ready(function() {
             $("#choices div:last-child").remove()
         }
 
+        $(".answers.section").attr("id",questions[step].type)
+
+
         if (step != 0)
             $("#back").show()
+        else
+            $("#back").hide()
+
         $("#progressBar").css("width", `${(step / questions.length) * 100}%`)
         $("#titleQuestion").text(questions[step].question)
+
         $(".answers.section").empty()
-        $(".answers.section").css("gap", "2rem")
-        $(".answers.section").css("flex-direction", "")
 
-        if (questions[step].type == "rectangle" || questions[step].type == "square" || questions[step].type == "square-small" || questions[step].type == "square-medium" ){
-            questions[step]?.answers.map((item, index) => {
-                if (item.image && item.value){
-                    $(".answers.section").append(`
-                    <div class="card ${questions[step].type}  item">
-                        <div class="card-body shadow ">
-                            <img src="../assets/images/send-icon.png" class="w-50 mb-4" alt="">
-                            <h4 class="w-fit">${item.value}</h4>
-                        </div>
+
+
+
+        if (questions[step].type === 'boxes-rectangle' || questions[step].type === 'rectangle' ){
+            questions[step].answers.map((item, index) => {
+                $(".answers.section").append(`
+                <div class="card ${questions[step].type} item shadow-sm">
+                    <div class="card-body shaddow">
+                        <h4 class="w-fit">${item.value}</h4>
                     </div>
-                    `)
-                }else if (item.image){
-                    $(".answers.section").append(`
-                    <div class="card ${questions[step].type}  item">
-                        <div class="card-body shadow ">
-                            <img src="../assets/images/send-icon.png" class="w-50 mb-4" alt="">
-                        </div>
-                    </div>
-                    `)
-                } else if (item.description){
-                    $(".answers.section").append(`
-                        <div class="card ${questions[step].type} item">
-                            <div class="card-body shadow ">
-                                <h4 class="w-fit">${item.value}</h4>
-                                <p> ${item.description} </p>
-                            </div>
-                        </div>`)
-                }else{
-                    $(".answers.section").css("gap", "1rem")
-                    $(".answers.section").append(`
-                        <div class="card ${questions[step].type} item">
-                            <div class="card-body shadow ">
-                                <h4 class="w-fit">${item.value}</h4>
-                            </div>
-                        </div>
-                    `)
-                }
+                </div>
+                `)
             })
-        }else if (questions[step].type == "form" ) {
+        }else if (questions[step].type === 'dynamic-form'){
 
+            $(".answers.section").append("<div class='select-form'></div><div class='form-selected'></div>")
+            questions[step].answers.map((item, index) => {
+                $(".answers.section > div.select-form").append(`
+                <div class="card ${questions[step].type} item shadow-sm">
+                    <div class="card-body shaddow">
+                        <h4 class="w-fit">${item.value}</h4>
+                    </div>
+                </div>
+                `)
+            })
+            $(".answers.section > div.form-selected").append(`
+            <div class="col-xl-12">
+                <div class="form-input">
+                    <fieldset class='float-label-field'>
+                        <label for="insuranceCompanyName" >First Name</label>
+                        <input id="insuranceCompanyName" type='text' name="insuranceCompanyName">
+                    </fieldset>
+                </div>
+            </div>
+            <div class="col-xl-12">
+                <div class="form-input">
+                    <fieldset class='float-label-field'>
+                        <label for="insuranceCompanyName" >Last Name</label>
+                        <input id="insuranceCompanyName" type='text' name="insuranceCompanyName">
+                    </fieldset>
+                </div>
+            </div>
+            <div class="col-xl-12">
+                <div class="form-input">
+                    <fieldset class='float-label-field'>
+                        <label for="insuranceCompanyName" >Email</label>
+                        <input id="insuranceCompanyName" type='text' name="insuranceCompanyName">
+                    </fieldset>
+                </div>
+            </div>
+            <div class="col-xl-12">
+                <div class="form-input">
+                    <fieldset class='float-label-field'>
+                        <label for="insuranceCompanyName" >Mobile</label>
+                        <input id="insuranceCompanyName" type='text' name="insuranceCompanyName">
+                    </fieldset>
+                </div>
+            </div>
+            <div class="col-xl-12">
+                <div class="form-input">
+                    <fieldset class='float-label-field'>
+                        <label for="insuranceCompanyName" >Nationality</label>
+                        <input id="insuranceCompanyName" type='text' name="insuranceCompanyName">
+                    </fieldset>
+                </div>
+            </div>
+            `)
+
+
+
+        } else if (questions[step].type == "form" ) {
             $(".answers.section").empty().css("flex-direction", "column")
             $(".answers.section").append(`
             <div class="col-xl-12">
@@ -147,7 +181,7 @@ $(document).ready(function() {
                 </div>
             </div>
             `)
-            
+
         }else{
             $(".answers.section").css("flex-direction", "column")
 
@@ -155,7 +189,7 @@ $(document).ready(function() {
                                 <input id="slider" class="slider" type="range" min="${questions[step].answers[0].value}" max="${questions[step].answers[1].value}" value="${(questions[step].answers[1].value - questions[step].answers[0].value)/2}">
                                 <span class="bar"><span class="fill"></span></span>
                             </div>`
-            
+
             let label = `<div class='d-flex flex-row h-auto justify-content-between w-100'><h4>AED ${questions[step].answers[0].value}</h4><h4>AED ${questions[step].answers[1].value}</h4></div>`
             let input = `
                 <div class='input-slider border-primary rounded w-100 p-2'>
@@ -163,7 +197,7 @@ $(document).ready(function() {
                 <input type=\"number\" class=\"form-control border-0 progress-price\" id=\"progress-price\">
                 </div>
             `
-        
+
             $(`.answers.section`).append(input, progress, label)
         }
     }
@@ -187,7 +221,7 @@ $(document).ready(function() {
         $(this).closest('.float-label-field').removeClass('float');
         }
     });
-    
+
 })
 
 
