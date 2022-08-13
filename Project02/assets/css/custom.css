@@ -7,6 +7,10 @@ html, body {
     color:#191970 !important;
 }
 
+.navbar-brand.logo{
+    width: 5% !important;
+}
+
 .rounded-radius{
     border-radius: 10px !important;
 }
@@ -112,10 +116,39 @@ footer .links a{
 }
 
 
+
+
 .input-icon i {
     color: white;
     min-width: 50px;
     text-align: center;
+}
+
+#navbarSupportedContent ul li a{
+    color: #143C5Aff !important;
+    font-weight: bold;
+    padding: .5rem 1.3rem;
+}
+
+#navbarSupportedContent ul li a.active{
+    background: #143C5Aff;
+    color: white !important;
+    border-radius: 20px;
+}
+
+
+#navbarSupportedContent ul{
+    background: lightgray;
+    border-radius: 20px;
+    padding: 0 !important;
+}
+
+.right .whatsapp{
+    width: 20%;
+}
+
+#navbarSupportedContent .right{
+    width: 20%;
 }
 
 @media only screen and (max-width: 768px) {
@@ -137,8 +170,8 @@ footer .links a{
     .navbar-light .navbar-nav .nav-link{
         color: white;
     }
-    nav img.colored{
-        display: none;
+    .navbar-brand.logo{
+        width: 20% !important;
     }
 
     nav .nav-buttons button{
@@ -159,7 +192,7 @@ footer .links a{
     }
 
     #navbarSupportedContent{
-        height: 30vh;
+        height: fit-content;
     }
 
     #navbarSupportedContent ul{
@@ -231,4 +264,34 @@ footer .links a{
         padding: 1rem;
     }
 
+
+    ul#pills-tab {
+        display: grid !important;
+        grid-template-columns: auto auto;
+    }
+    .section03 .form{
+        width: 100% !important;
+    }
+
+    .section03 .form ul{
+        width: 100%;
+    }
+    .section03 .form ul > div{
+        width: 100% !important;
+    }
+
+
+    .section02 > div{
+        width: 90% !important;
+    }
+
+    .input-icon{
+        width: 100% !important;
+    }
+
+
+    #navbarSupportedContent .right{
+        width: 100%;
+    }
 }
+

@@ -21,15 +21,17 @@ $(document).ready(function() {
     let step = 0
 
     $("#back").hide()
-    $("#titleQuestion").text(questions[4].question)
-    $(".answers.section").css("gap", "2rem")
+    $("#titleQuestion").text(questions[step].question)
+    $(".answers.section").css("gap", "1rem")
+
+    $(".answers.section").css("display", "grid")
+    $(".answers.section").css("grid-template-columns", "auto auto")
 
 
     questions[step].answers.map((item, index) => {
         $(".answers.section").append(`
         <div class="card ${questions[step].type} item">
             <div class="card-body shaddow">
-                <img src="../assets/images/send-icon.png" class="w-50 mb-4" alt="">
                 <h4 class="w-fit">${item.value}</h4>
             </div>
         </div>
@@ -38,30 +40,33 @@ $(document).ready(function() {
 
 
     const updateQuestion = (direction) =>{
-        $("#choices").append(`
-            <div>
-                <h6>${questions[step]?.answerTitle}</h6>
-                <p>${$(".card.item.active").text().trim()}</p>
-            </div>
-        `)
-        if (direction == "next")
+
+        if (direction == "next"){
             step++
-        else
+
+            $("#choices").append(`
+                <div>
+                    <h6>${questions[step]?.answerTitle}</h6>
+                    <p>${$(".card.item.active").text().trim()}</p>
+                </div>
+            `)
+        }
+        else{
             step--
-            
+            $("#choices div:last-child").remove()
+        }
+
         if (step != 0)
             $("#back").show()
-
         $("#progressBar").css("width", `${(step / questions.length) * 100}%`)
-        $(".progress-icon").css("left", `${((step / questions.length) * 100) + 1.2}%`)
         $("#titleQuestion").text(questions[step].question)
         $(".answers.section").empty()
         $(".answers.section").css("gap", "2rem")
         $(".answers.section").css("flex-direction", "")
 
-        if (questions[step].type == "rectangle" || questions[step].type == "square" ){
+        if (questions[step].type == "rectangle" || questions[step].type == "square" || questions[step].type == "square-small" || questions[step].type == "square-medium" ){
             questions[step]?.answers.map((item, index) => {
-                if (item.image){
+                if (item.image && item.value){
                     $(".answers.section").append(`
                     <div class="card ${questions[step].type}  item">
                         <div class="card-body shadow ">
@@ -70,15 +75,22 @@ $(document).ready(function() {
                         </div>
                     </div>
                     `)
-                }else if (item.description){
+                }else if (item.image){
+                    $(".answers.section").append(`
+                    <div class="card ${questions[step].type}  item">
+                        <div class="card-body shadow ">
+                            <img src="../assets/images/send-icon.png" class="w-50 mb-4" alt="">
+                        </div>
+                    </div>
+                    `)
+                } else if (item.description){
                     $(".answers.section").append(`
                         <div class="card ${questions[step].type} item">
                             <div class="card-body shadow ">
                                 <h4 class="w-fit">${item.value}</h4>
                                 <p> ${item.description} </p>
                             </div>
-                        </div>
-                    `)
+                        </div>`)
                 }else{
                     $(".answers.section").css("gap", "1rem")
                     $(".answers.section").append(`

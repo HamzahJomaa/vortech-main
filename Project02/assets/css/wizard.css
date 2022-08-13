@@ -3,6 +3,24 @@
     height: 300px;
 }
 
+.card.square-small.item{
+    width: 100px;
+    height: 100px;
+}
+
+.card.square-medium.item{
+    height: 200px;
+}
+
+.progress-icon{
+    position: relative;
+    left: 0;
+    transition: all .45s ease-in-out;
+    moz-transition: all .45s ease-in-out;
+    -o-transition: all .45s ease-in-out;
+    -webkit-transition: all .45s ease-in-out;
+}
+
 #progressBar{
     background-color: #497BB0 !important;
 
@@ -13,11 +31,21 @@
     border: none;
 }
 
-.answers .card.square .card-body{
+.answers{
+    height: 50vh;
+    overflow-y: scroll;
+    padding: 1rem;
+}
+
+.answers .card.square .card-body,.answers .card.square-small .card-body{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+.answers .card.square-small .card-body img{
+    margin-bottom: 0 !important; ;
 }
 
 .answers .card.rectangle{
