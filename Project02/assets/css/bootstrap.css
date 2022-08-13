@@ -46,6 +46,10 @@
     width: 90% !important;
 }
 
+.w-95{
+    width: 95% !important;
+}
+
 .w-fit{
     width: fit-content;
 }
@@ -56,4 +60,12 @@
 
 .start-90{
     left:90%;
+}
+
+.bg-success{
+    background-color: #25D366 !important;
+}
+
+.bg-primary{
+    background-color: #1877F2 !important;
 }
