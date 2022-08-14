@@ -1,4 +1,5 @@
 $(document).ready(function() {
+    
     $("body").on("click",".card.item",function(){
         let checkActive = $(".card.item.active");
         checkActive.toggleClass("active");
@@ -24,11 +25,12 @@ $(document).ready(function() {
     $("#titleQuestion").text(questions[4].question)
     $(".answers.section").css("gap", "2rem")
 
+    $(".answers.section").attr("id",questions[step].type)
 
     questions[step].answers.map((item, index) => {
         $(".answers.section").append(`
-        <div class="card ${questions[step].type} item">
-            <div class="card-body shaddow">
+        <div class="card ${questions[step].type} item shadow-sm">
+            <div class="card-body border-0 ">
                 <img src="../assets/images/send-icon.png" class="w-50 mb-4" alt="">
             </div>
         </div>
@@ -60,13 +62,14 @@ $(document).ready(function() {
         $(".answers.section").empty()
         $(".answers.section").css("gap", "2rem")
         $(".answers.section").css("flex-direction", "")
+        $(".answers.section").attr("id",questions[step].type)
 
-        if (questions[step].type == "rectangle" || questions[step].type == "square" || questions[step].type == "square-small" ){
+        if (questions[step].type == "rectangle" || questions[step].type == "square" || questions[step].type == "square-small" || questions[step].type == "boxes-rectangle" ){
             questions[step]?.answers.map((item, index) => {
                 if (item.image && item.value){
                     $(".answers.section").append(`
-                    <div class="card ${questions[step].type}  item">
-                        <div class="card-body shadow ">
+                    <div class="card ${questions[step].type} item shadow-sm ">
+                        <div class="card-body">
                             <img src="../assets/images/send-icon.png" class="w-50 mb-4" alt="">
                             <h4 class="w-fit">${item.value}</h4>
                         </div>
@@ -74,16 +77,16 @@ $(document).ready(function() {
                     `)
                 }else if (item.image){
                     $(".answers.section").append(`
-                    <div class="card ${questions[step].type}  item">
-                        <div class="card-body shadow ">
+                    <div class="card ${questions[step].type} item shadow-sm">
+                        <div class="card-body">
                             <img src="../assets/images/send-icon.png" class="w-50 mb-4" alt="">
                         </div>
                     </div>
                     `)
                 } else if (item.description){
                     $(".answers.section").append(`
-                        <div class="card ${questions[step].type} item">
-                            <div class="card-body shadow ">
+                        <div class="card ${questions[step].type} item shadow-sm">
+                            <div class="card-body">
                                 <h4 class="w-fit">${item.value}</h4>
                                 <p> ${item.description} </p>
                             </div>
@@ -91,8 +94,8 @@ $(document).ready(function() {
                 }else{
                     $(".answers.section").css("gap", "1rem")
                     $(".answers.section").append(`
-                        <div class="card ${questions[step].type} item">
-                            <div class="card-body shadow ">
+                        <div class="card ${questions[step].type} item shadow-sm">
+                            <div class="card-body">
                                 <h4 class="w-fit">${item.value}</h4>
                             </div>
                         </div>

@@ -16,6 +16,7 @@ $(document).ready(function() {
     $("body").on("input", "#slider", function() {
         $(".bar .fill").css("width", `${($("#slider").val() / ($("#slider").attr("max")-$("#slider").attr("min")))*100}%`);
         $("#progress-price").val($(this).val())
+        console.log($(this).val());
     })
 
     let step = 0
