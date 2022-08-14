@@ -7,6 +7,19 @@ html, body {
     color:#191970 !important;
 }
 
+button.btn-primary{
+    border: none !important;
+}
+
+input:focus, input:hover{
+    box-shadow: none !important;
+}
+
+.image-service{
+    width: 75px;
+    height: 75px;
+}
+
 .navbar-brand.logo{
     width: 5% !important;
 }
