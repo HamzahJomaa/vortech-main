@@ -1,4 +1,5 @@
 $(document).ready(function() {
+    
     $("body").on("click",".card.item",function(){
         let checkActive = $(".card.item.active");
         checkActive.toggleClass("active");
@@ -24,6 +25,7 @@ $(document).ready(function() {
     $("#titleQuestion").text(questions[4].question)
     $(".answers.section").css("gap", "2rem")
 
+    $(".answers.section").attr("id",questions[step].type)
 
     questions[step].answers.map((item, index) => {
         $(".answers.section").append(`
@@ -60,8 +62,9 @@ $(document).ready(function() {
         $(".answers.section").empty()
         $(".answers.section").css("gap", "2rem")
         $(".answers.section").css("flex-direction", "")
+        $(".answers.section").attr("id",questions[step].type)
 
-        if (questions[step].type == "rectangle" || questions[step].type == "square" || questions[step].type == "square-small" ){
+        if (questions[step].type == "rectangle" || questions[step].type == "square" || questions[step].type == "square-small" || questions[step].type == "boxes-rectangle" ){
             questions[step]?.answers.map((item, index) => {
                 if (item.image && item.value){
                     $(".answers.section").append(`

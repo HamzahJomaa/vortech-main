@@ -1,12 +1,15 @@
+html, body {
+    max-width: 100% !important;
+    overflow-x: hidden !important;
+}
+
+
 .answers .card.square{
     width: 300px;
     height: 300px;
 }
 
-.card.square-small.item{
-    width: 100px;
-    height: 100px;
-}
+
 
 .card.square-medium.item{
     height: 200px;
@@ -23,7 +26,6 @@
 
 #progressBar{
     background-color: #497BB0 !important;
-
 }
 .button-primary{
     background-color: #497BB0;
@@ -64,14 +66,41 @@
     width: 20% !important;
 }
 
-#boxes-rectangle{
-    display: grid;
-    grid-template-columns: auto auto;
+#square-small{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-content: flex-start;
 }
+
+#square-small > div{
+    width: 15%;
+}
+
+#square-small > div {
+    height: 100px;
+}
+
+#boxes-rectangle{
+    display: grid !important;
+    grid-template-columns: 50% 50%;
+}
+
+
+
 
 #rectangle{
     display: grid;
     grid-template-columns: auto;
+}
+
+#square{
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+#form{
+    display: flex;
 }
 
 #dynamic-form > div.select-form {
