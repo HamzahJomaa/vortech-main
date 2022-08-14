@@ -93,16 +93,17 @@
               class="carValueAmount rounded-radius w-fit"
               style="background-color: #6cb4ee"
             >
-              <h6 class="text-white p-2">AED ${min}</h6>
+            <input type="number" class="form-control progress-price bg-transparent border-0" id="progress-price"/>
+              
             </div>
             <div class="car-value-slider-container">
               <input
                 id="slider"
                 class="slider"
                 type="range"
-                min="${min}"
-                max="${max}"
-                value="${(max - min)/2}"
+                min="100000"
+                max="100000"
+                value=`${(max-min)*(0.5)}`
               />
               <span class="bar"><span class="fill"></span></span>
             </div>
@@ -1962,6 +1963,16 @@
         </div>
       </div>
     </section>
+
+
+    <script>
+      // Update Input Upon Slider Change
+    $("body").on("input", "#slider", function() {
+        $(".bar .fill").css("width", `${($("#slider").val() / ($("#slider").attr("max")-$("#slider").attr("min")))*100}%`);
+        $("#progress-price").val($(this).val())
+    })
+    </script>
+
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
