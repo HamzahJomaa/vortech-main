@@ -227,11 +227,11 @@ footer .links a{
         border: none;
     }
 
-
-
-    .mySwiper .swiper-slide {
-        background-size:contain !important;
+    .swiper-slide{
+        background-size: cover !important;
     }
+
+
     .mySwiper .swiper-slide div{
         width: 100% !important;
     }
