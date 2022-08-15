@@ -170,8 +170,10 @@ footer .links a{
         grid-template-columns: auto auto;
     }
 
-    nav{
-        background-color: #4870ab;
+
+    .navbar-light .navbar-toggler-icon {
+
+        background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'><path stroke='rgba%2872, 112, 171, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/></svg>") !important;
     }
     .navbar-light .navbar-brand{
         width: 20%;
@@ -225,11 +227,7 @@ footer .links a{
         border: none;
     }
 
-    .navbar-light .navbar-toggler-icon{
-        background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'><path stroke='rgba%28255, 255, 255, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/></svg>");
-        
-        
-    }
+
 
     .mySwiper .swiper-slide {
         background-size:contain !important;
