@@ -59,6 +59,7 @@ html, body {
 .answers{
     height: 50vh;
     overflow-y: scroll;
+    overflow-x: clip;
     padding: 1rem;
 }
 

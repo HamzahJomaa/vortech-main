@@ -21,7 +21,7 @@ $(document).ready(function() {
 
     let step = 0
 
-    $("#back").hide()
+    $("#back").css("visibility","hidden")
     $("#titleQuestion").text(questions[4].question)
     $(".answers.section").css("gap", "2rem")
 
@@ -39,19 +39,26 @@ $(document).ready(function() {
 
 
     const updateQuestion = (direction) =>{
-        $("#choices").append(`
-            <div>
-                <h6>${questions[step]?.answerTitle}</h6>
-                <p>${$(".card.item.active").text().trim()}</p>
-            </div>
-        `)
-        if (direction == "next")
+
+        if (direction == "next"){
             step++
-        else
+
+            $("#choices").append(`
+                <div>
+                    <h6>${questions[step]?.answerTitle}</h6>
+                    <p>${$(".card.item.active").text().trim()}</p>
+                </div>
+            `)
+        }
+        else{
             step--
-            
+            $("#choices div:last-child").remove()
+        }
+
         if (step != 0)
-            $("#back").show()
+            $("#back").css("visibility","visible")
+        else
+            $("#back").css("visibility","hidden")
 
         $("#progressBar").css("width", `${(step / questions.length) * 100}%`)
         $(".progress-icon").css("left", `${((step / questions.length) * 100) + 1.2}%`)

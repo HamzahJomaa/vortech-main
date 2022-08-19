@@ -20,7 +20,7 @@ $(document).ready(function() {
 
     let step = 0
 
-    $("#back").hide()
+    $("#back").css("visibility","hidden")
     $("#titleQuestion").text(questions[step].question)
     $(".answers.section").css("gap", "1rem")
 
@@ -56,9 +56,9 @@ $(document).ready(function() {
 
 
         if (step != 0)
-            $("#back").show()
+            $("#back").css("visibility","visible")
         else
-            $("#back").hide()
+            $("#back").css("visibility","hidden")
 
         $("#progressBar").css("width", `${(step / questions.length) * 100}%`)
         $("#titleQuestion").text(questions[step].question)
