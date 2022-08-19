@@ -3,15 +3,16 @@
 }
 
 .text-primary{
-    color:#4870ab !important;
+    color:#002D62 !important;
 }
 
 .btn-primary{
-    background-color: #4870ab !important;
+    background-color: #002D62 !important;
+    border:#002D62 solid 1px !important;
 }
 
 .border-primary{
-    border:#4870ab solid 1.5px !important
+    border:#002D62 solid 1.5px !important;
 }
 
 .bg-secondary{
@@ -67,7 +68,7 @@
 }
 
 .bg-primary{
-    background-color: #1877F2 !important;
+    background-color: #002D62 !important;
 }
 
 .w-10{

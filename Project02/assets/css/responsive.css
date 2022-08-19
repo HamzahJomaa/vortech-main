@@ -1,0 +1,55 @@
+.filter-button button{
+    display: none;
+}
+
+
+@media only screen and (max-width: 768px) {
+    
+
+    .document-cards .card,
+    .thank-you-text,
+    .pay-insurance-house .card-insurance,
+    .price-summary,
+    .insurance-house,
+    .insurance-house>div>div
+    {
+        width: 100% !important;
+        text-align: center;
+        margin: auto;
+    }
+
+    .insurance-filter{
+        display: none;
+    }
+ 
+    .filter-button button{
+        display: block;
+    }
+
+    .insurance-house .card-title{
+        width: 100% !important;
+    }
+    .insurance-house .card-body .card-item{
+        width: 100% !important;
+        text-align: start;
+    }
+    .insurance-house .card-body .card-item >img{
+        width: 20px !important;
+        height: 20px !important;
+    }
+    .insurance-house .premium{
+        width: 50% !important;
+    }
+
+    .insurance-house .accordion-body .accordion-item-title{
+        border-bottom: unset;
+        text-align: start !important;
+        width: 100% !important;
+    }
+
+    #coverage .features-icon{
+        position: relative;
+        top: 2rem;
+        width: 20% !important;
+    }
+}

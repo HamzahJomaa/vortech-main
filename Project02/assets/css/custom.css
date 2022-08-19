@@ -339,7 +339,7 @@ footer .links a{
 
 .custom-checkbox .custom-control-input:checked ~ .custom-control-label::before {
     background-color:white;
-    border-color: #4870ab;
+    border-color: #002D62;
 }
 
 .accordion-button{
@@ -379,17 +379,25 @@ footer .links a{
 }
 
 
-
+.info-image-card{
+    width: 15px;
+    height: 15px;
+}
 
 .insurance-house .card .card-body .info-image-card{
-    height: 10%;
+    width: 15px;
+    height: 15px;
 }
 
 .insurance-house .accordion-body .accordion-item-title{
-    border-bottom: solid 2px #4870ab;
+    border-bottom: solid 2px #002D62;
 }
 
-.insurance-house .accordion-body .accordion-item-title .features-icon{
+#coverage{
+    border-bottom: solid 2px #002D62;
+}
+
+#coverage .features-icon{
     position: relative;
     top: 2.35rem;
     width: 8% !important;
@@ -421,3 +429,4 @@ footer .links a{
     top: 0;
     opacity: 0;
   }
+
