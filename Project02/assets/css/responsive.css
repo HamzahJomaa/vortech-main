@@ -1,6 +1,9 @@
 .filter-button button{
     display: none;
 }
+.responsive-filter-title{
+    display: none;
+}
 
 
 @media only screen and (max-width: 768px) {
@@ -10,7 +13,6 @@
     .thank-you-text,
     .pay-insurance-house .card-insurance,
     .price-summary,
-    .insurance-house,
     .insurance-house>div>div,
     .insurance-house .accordion-body >div,
     .insurance-house .accordion-item >div>div
@@ -20,6 +22,15 @@
         margin: auto;
     }
 
+    .insurance-house {
+        width: 95% !important;
+        margin: auto !important;
+    }
+    .main-section{
+        margin-top: 0 !important;
+        width: 100% !important;
+        margin: auto;
+    }
     .pay-insurance-house{
         width: 95% !important;
     }
@@ -40,7 +51,24 @@
         display: none;
     }
 
-    .insurance-filter{
+    #back{
+        border: none;
+        background: transparent;
+    }
+
+    #insurance-filter{
+        display: none;
+        width: 100% !important;
+        margin: auto;
+        border: unset;
+        border-radius: 0px !important;
+        box-shadow: unset;
+    }
+    .filter-title{
+        display: none;
+    }
+
+    .responsive-filter-title i,.responsive-filter-title h3{
         display: none;
     }
  

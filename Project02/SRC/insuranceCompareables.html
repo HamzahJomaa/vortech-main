@@ -1,6 +1,7 @@
 <html>
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://example.com/fontawesome/v6.1.2/js/all.js" data-auto-replace-svg="nest"></script>
     <link
       rel="stylesheet"
       href="../assets/lib/bootstrap-5.0.2/dist/css/bootstrap.min.css"
@@ -74,14 +75,12 @@
         </button>
       </div>
     </section>
-    <section
-      style="
+    <section>
+      <!-- style="
         background: #f4f4f4ff;
         -webkit-box-shadow: 0px 22px 31px -31px rgba(0, 0, 0, 0.75);
         -moz-box-shadow: 0px 22px 31px -31px rgba(0, 0, 0, 0.75);
-        box-shadow: 0px 22px 31px -31px rgba(0, 0, 0, 0.75);
-      "
-    >
+        box-shadow: 0px 22px 31px -31px rgba(0, 0, 0, 0.75);" -->
       <div class="progress">
         <div
           class="progress-bar bg-dark"
@@ -93,17 +92,23 @@
           aria-valuemax="100"
         ></div>
       </div>
-      <div class="d-flex flex-row" id="choices"></div>
-      <div class="filter-button pb-3">
-        <button class="btn bg-white rounded-radius text-primary fw-bold shadow mb-3 bg-white rounded">
-          <i class="fa-solid fa-filter"></i>
-          Filter</button>
-        </div>
+      <!-- <div class="d-flex flex-row" id="choices"></div> -->
     </section>
-    
-   
+    <div class="filter-div" style="background-color:#f4f4f4ff;" class="shadow bg-body rounded">
+    <div class="filter-button ps-3 pt-2">
+      <button class="btn bg-white rounded-pill text-primary fw-bold shadow bg-white rounded px-3" id="filter-button">
+        <img src="../assets/images/filter-solid.svg" alt="" style="width:15px ;">
+        Filter</button>
+      </div>
+      <div class="responsive-filter-title d-flex flex-row justify-content-between w-60 py-2 ">
+        <button id="back"><img src="../assets/images/right-arrow.png" alt="" class="responsive-filter-title ms-3" style="width:20px; height:20px"></button>
+        
+          <h3 class="fw-bold responsive-filter-title text-center">Filter</h3>
+          
+      </div>
+    </div>
 
-    <section class="mt-5">
+    <section class="mt-lg-5 mt-3 title-heading">
       <div class="w-95 mx-auto">
         <h6 class="text-primary">
           Hi, <b>"Oneeb Sheikh"</b>,we have found below the best quotations for
@@ -113,17 +118,17 @@
       </div>
     </section>
 
-    <section class="w-95 mx-auto mt-5 d-flex flex-row justify-content-between">
-      <div class="insurance-filter w-25 card rounded-radius shadow p-3 mb-5">
+    <section class="main-section w-95 mx-auto mt-5 d-flex flex-row justify-content-between">
+      <div class="insurance-filter w-25 card rounded-radius shadow p-3 mb-5" id="insurance-filter">
         <div
           class="card-title d-flex flex-row mt-1 justify-content-between w-90 mx-auto"
         >
-          <b>Filters</b>
-          <p>Clear Filters</p>
+          <b class="filter-title">Filters</b>
+          <p><a href="#" class="text-dark">Clear Filters</a></p>
         </div>
         <div class="card-body">
           <div class="car-value w-90 mx-auto border-bottom">
-            <h6 class="text-primary">Car Value</h6>
+            <h6 class="text-primary fw-bold">Car Value</h6>
             <div class="form-check">
               <input
                 class="form-check-input"
@@ -149,8 +154,8 @@
               </label>
             </div>
             <div
-              class="carValueAmount rounded-radius w-fit"
-              style="background-color: #6cb4ee"
+              class="carValueAmount rounded-pill w-fit mt-3 mb-2"
+              style="background-color: #5D8AA8"
             >
             <input type="number" class="form-control progress-price bg-transparent border-0" id="slider-input"/>
               
@@ -175,7 +180,7 @@
           </div>
 
           <div class="insurance-plans w-90 mx-auto border-bottom mt-3 pb-3">
-            <h6 class="text-primary">Insurance Plans</h6>
+            <h6 class="text-primary fw-bold">Insurance Plans</h6>
             <div class="form-check">
               <input
                 class="form-check-input"
@@ -213,7 +218,7 @@
           </div>
 
           <div class="repairing-types w-90 mx-auto border-bottom mt-3 pb-3">
-            <h6 class="text-primary">Repairing Types</h6>
+            <h6 class="text-primary fw-bold">Repairing Types</h6>
             <div class="form-check">
               <input
                 class="form-check-input"
@@ -251,7 +256,7 @@
           </div>
 
           <div class="insurance-types w-90 mx-auto border-bottom mt-3 pb-3">
-            <h6 class="text-primary">Insurance Types</h6>
+            <h6 class="text-primary fw-bold">Insurance Types</h6>
             <div class="form-check">
               <input
                 class="form-check-input"
@@ -289,7 +294,7 @@
           </div>
 
           <div class="insurance-companies w-90 mx-auto border-bottom mt-3 pb-3">
-            <h6 class="text-primary">Insurance Companies</h6>
+            <h6 class="text-primary fw-bold">Insurance Companies</h6>
             <div class="form-check">
               <input
                 class="form-check-input"
@@ -418,7 +423,7 @@
                     alt=""
                     class="image-service "
                   />
-                  <div>
+                  <div class="mb-2 mb-lg-0">
                     <h6 class="fw-bold m-0">Third Party Liability</h6>
                     <p class="m-0 mt-lg-2">Up To 2 Million</p>
                   </div>
@@ -436,7 +441,7 @@
                     alt=""
                     class="image-service "
                   />
-                  <div>
+                  <div class="mb-2 mb-lg-0">
                     <h6 class="fw-bold m-0">Agency Repair</h6>
                     <p class="m-0 mt-lg-2">Not Included</p>
                   </div>
@@ -472,7 +477,7 @@
                 <h3 class="text-primary fw-bold mb-0">AED 456</h3>
                 <p class="mt-0">Excluded Vat</p>
                 <div class="buttons-thankyou">
-                <button class="btn bg-primary text-white fw-bold rounded-radius w-fit px-2 w-100">
+                <button class="btn bg-primary text-white fw-bold rounded-radius w-fit px-3">
                   Get Now
                 </button>
               </div>
@@ -834,7 +839,7 @@
                     alt=""
                     class="image-service "
                   />
-                  <div>
+                  <div class="mb-2 mb-lg-0">
                     <h6 class="fw-bold m-0">Third Party Liability</h6>
                     <p class="m-0 mt-lg-2">Up To 2 Million</p>
                   </div>
@@ -852,9 +857,9 @@
                     alt=""
                     class="image-service "
                   />
-                  <div>
-                    <h6 class="fw-bold">Agency Repair</h6>
-                    <p>Not Included</p>
+                  <div class="mb-2 mb-lg-0">
+                    <h6 class="fw-bold m-0">Agency Repair</h6>
+                    <p class="m-0 mt-lg-2">Not Included</p>
                   </div>
                   <div class="position-relative top-0 start-0">
                     <img
@@ -871,8 +876,8 @@
                     class="image-service "
                   />
                   <div>
-                    <h6 class="fw-bold">Excess</h6>
-                    <p>AED 1000</p>
+                    <h6 class="fw-bold m-0">Excess</h6>
+                    <p class="m-0 mt-lg-2">AED 1000</p>
                   </div>
                   <div class="position-relative top-0 start-0">
                     <img
@@ -888,7 +893,7 @@
                 <h3 class="text-primary fw-bold mb-0">AED 456</h3>
                 <p class="mt-0">Excluded Vat</p>
                 <div class="buttons-thankyou">
-                <button class="btn bg-primary text-white fw-bold rounded-radius w-fit px-2">
+                <button class="btn bg-primary text-white fw-bold rounded-radius w-fit px-3">
                   Get Now
                 </button>
               </div>
@@ -1246,7 +1251,7 @@
                     alt=""
                     class="image-service "
                   />
-                  <div>
+                  <div class="mb-2 mb-lg-0">
                     <h6 class="fw-bold m-0">Third Party Liability</h6>
                     <p class="m-0 mt-lg-2">Up To 2 Million</p>
                   </div>
@@ -1264,7 +1269,7 @@
                     alt=""
                     class="image-service "
                   />
-                  <div>
+                  <div class="mb-2 mb-lg-0">
                     <h6 class="fw-bold m-0">Agency Repair</h6>
                     <p class="m-0 mt-lg-2">Not Included</p>
                   </div>
@@ -1283,8 +1288,8 @@
                     class="image-service "
                   />
                   <div>
-                    <h6 class="fw-bold">Excess</h6>
-                    <p>AED 1000</p>
+                    <h6 class="fw-bold m-0">Excess</h6>
+                    <p class="m-0 mt-lg-2">AED 1000</p>
                   </div>
                   <div class="position-relative top-0 start-0">
                     <img
@@ -1300,7 +1305,7 @@
                 <h3 class="text-primary fw-bold mb-0">AED 456</h3>
                 <p class="mt-0">Excluded Vat</p>
                 <div class="buttons-thankyou">
-                <button class="btn bg-primary text-white fw-bold rounded-radius w-fit px-2">
+                <button class="btn bg-primary text-white fw-bold rounded-radius w-fit px-3">
                   Get Now
                 </button>
               </div>
@@ -1661,9 +1666,9 @@
                     alt=""
                     class="image-service "
                   />
-                  <div>
-                    <h6 class="fw-bold">Third Party Liability</h6>
-                    <p>Up To 2 Million</p>
+                  <div class="mb-2 mb-lg-0">
+                    <h6 class="fw-bold m-0">Third Party Liability</h6>
+                    <p class="m-0 mt-lg-2">Up To 2 Million</p>
                   </div>
                   <div class="position-relative top-0 start-0">
                     <img
@@ -1679,9 +1684,9 @@
                     alt=""
                     class="image-service "
                   />
-                  <div>
-                    <h6 class="fw-bold">Agency Repair</h6>
-                    <p>Not Included</p>
+                  <div class="mb-2 mb-lg-0">
+                    <h6 class="fw-bold m-0">Agency Repair</h6>
+                    <p class="m-0 mt-lg-2">Not Included</p>
                   </div>
                   <div class="position-relative top-0 start-0">
                     <img
@@ -1698,8 +1703,8 @@
                     class="image-service "
                   />
                   <div>
-                    <h6 class="fw-bold">Excess</h6>
-                    <p>AED 1000</p>
+                    <h6 class="fw-bold m-0">Excess</h6>
+                    <p class="m-0 mt-lg-2">AED 1000</p>
                   </div>
                   <div class="position-relative top-0 start-0">
                     <img
@@ -1715,7 +1720,7 @@
                 <h3 class="text-primary fw-bold mb-0">AED 456</h3>
                 <p class="mt-0">Excluded Vat</p>
                 <div class="buttons-thankyou">
-                <button class="btn bg-primary text-white fw-bold rounded-radius w-fit px-2">
+                <button class="btn bg-primary text-white fw-bold rounded-radius w-fit px-3">
                   Get Now
                 </button>
               </div>
@@ -2077,9 +2082,9 @@
                     alt=""
                     class="image-service "
                   />
-                  <div>
-                    <h6 class="fw-bold">Third Party Liability</h6>
-                    <p>Up To 2 Million</p>
+                  <div class="mb-2 mb-lg-0">
+                    <h6 class="fw-bold m-0">Third Party Liability</h6>
+                    <p class="m-0 mt-lg-2">Up To 2 Million</p>
                   </div>
                   <div class="position-relative top-0 start-0">
                     <img
@@ -2095,9 +2100,9 @@
                     alt=""
                     class="image-service "
                   />
-                  <div>
-                    <h6 class="fw-bold">Agency Repair</h6>
-                    <p>Not Included</p>
+                  <div class="mb-2 mb-lg-0">
+                    <h6 class="fw-bold m-0">Agency Repair</h6>
+                    <p class="m-0 mt-lg-2">Not Included</p>
                   </div>
                   <div class="position-relative top-0 start-0">
                     <img
@@ -2114,8 +2119,8 @@
                     class="image-service "
                   />
                   <div>
-                    <h6 class="fw-bold">Excess</h6>
-                    <p>AED 1000</p>
+                    <h6 class="fw-bold m-0">Excess</h6>
+                    <p class="m-0 mt-lg-2">AED 1000</p>
                   </div>
                   <div class="position-relative top-0 start-0">
                     <img
@@ -2131,7 +2136,7 @@
                 <h3 class="text-primary fw-bold mb-0">AED 456</h3>
                 <p class="mt-0">Excluded Vat</p>
                 <div class="buttons-thankyou">
-                <button class="btn bg-primary text-white fw-bold rounded-radius w-fit px-2">
+                <button class="btn bg-primary text-white fw-bold rounded-radius w-fit px-3">
                   Get Now
                 </button>
               </div>
@@ -2493,9 +2498,9 @@
                     alt=""
                     class="image-service "
                   />
-                  <div>
-                    <h6 class="fw-bold">Third Party Liability</h6>
-                    <p>Up To 2 Million</p>
+                  <div class="mb-2 mb-lg-0">
+                    <h6 class="fw-bold m-0 ">Third Party Liability</h6>
+                    <p class="m-0 mt-lg-2">Up To 2 Million</p>
                   </div>
                   <div class="position-relative top-0 start-0">
                     <img
@@ -2511,9 +2516,9 @@
                     alt=""
                     class="image-service "
                   />
-                  <div>
-                    <h6 class="fw-bold">Agency Repair</h6>
-                    <p>Not Included</p>
+                  <div class="mb-2 mb-lg-0">
+                    <h6 class="fw-bold m-0">Agency Repair</h6>
+                    <p class="m-0 mt-lg-2">Not Included</p>
                   </div>
                   <div class="position-relative top-0 start-0">
                     <img
@@ -2530,8 +2535,8 @@
                     class="image-service "
                   />
                   <div>
-                    <h6 class="fw-bold">Excess</h6>
-                    <p>AED 1000</p>
+                    <h6 class="fw-bold m-0">Excess</h6>
+                    <p class="m-0 mt-lg-2">AED 1000</p>
                   </div>
                   <div class="position-relative top-0 start-0">
                     <img
@@ -2547,7 +2552,7 @@
                 <h3 class="text-primary fw-bold mb-0">AED 456</h3>
                 <p class="mt-0">Excluded Vat</p>
                 <div class="buttons-thankyou">
-                <button class="btn bg-primary text-white fw-bold rounded-radius w-fit px-2">
+                <button class="btn bg-primary text-white fw-bold rounded-radius w-fit px-3">
                   Get Now
                 </button>
               </div>
@@ -2897,11 +2902,11 @@
       crossorigin="anonymous"
     ></script>
 
-    <script
+    <!-- <script
       src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
       integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
       crossorigin="anonymous"
-    ></script>
+    ></script> -->
     <script
       src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
       integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
@@ -2909,6 +2914,23 @@
     ></script>
     <script>
       $(document).ready(function() {
+
+          $("#filter-button").click(function(){
+          $("#insurance-filter").toggle();
+          $(".insurance-house").toggle();
+          $(".title-heading").toggle();
+          $(".responsive-filter-title").toggle();
+          $(".filter-button").toggle();
+        });
+
+        $("#back").click(function(){
+          $("#insurance-filter").toggle();
+          $(".insurance-house").toggle();
+          $(".title-heading").toggle();
+          $(".responsive-filter-title").toggle();
+          $(".filter-button").toggle();
+        });
+
         $("#slider-input").keyup(function() {
           $("#slider").val($(this).val())
 

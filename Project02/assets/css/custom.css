@@ -282,8 +282,19 @@ footer .links a{
 
 }
 
+.form-check-input{
+    background-color: #c6c6c6c6 !important;
+    border: #c6c6c6c6 !important;
+}
+
 .custom-radio-input .form-check-input {
     cursor: pointer;
+    
+}
+
+.form-check-input:checked {
+    background-color: #002D62 !important;
+    border-color: #002D62 !important;
 }
 .custom-radio-input .form-check-input::before {
     
