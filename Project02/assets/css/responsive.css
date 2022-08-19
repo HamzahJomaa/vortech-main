@@ -11,7 +11,9 @@
     .pay-insurance-house .card-insurance,
     .price-summary,
     .insurance-house,
-    .insurance-house>div>div
+    .insurance-house>div>div,
+    .insurance-house .accordion-body >div,
+    .insurance-house .accordion-item >div>div
     {
         width: 100% !important;
         text-align: center;
@@ -26,8 +28,9 @@
         display: block;
     }
 
-    .insurance-house .card-title{
-        width: 100% !important;
+    .premium p,.premium h3, .card-item h6,.card-item p
+    {
+        font-size: 13px;
     }
     .insurance-house .card-body .card-item{
         width: 100% !important;
@@ -37,20 +40,21 @@
         width: 20px !important;
         height: 20px !important;
     }
-    .insurance-house .premium{
+    /* .insurance-house .premium{
         width: 50% !important;
-    }
+    } */
 
     .insurance-house .accordion-body .accordion-item-title{
         border-bottom: unset;
         text-align: start !important;
+        margin-bottom: 1rem;
         width: 100% !important;
     }
 
     #coverage .features-icon{
         position: relative;
-        top: 2rem;
-        width: 20% !important;
+        top: 1.6rem;
+        width: 10% !important;
     }
 
     .buttons-thankyou button{
