@@ -27,7 +27,7 @@ $(document).ready(function() {
 
     let step = 0
 
-    $("#back").hide()
+    $("#back").css("visibility","hidden")
     $("#titleQuestion").text(questions[4].question)
     $(".answers.section").css("gap", "2rem")
 
@@ -74,9 +74,9 @@ $(document).ready(function() {
         }
 
         if (step != 0)
-            $("#back").show()
+            $("#back").css("visibility","visible")
         else
-            $("#back").hide()
+            $("#back").css("visibility","hidden")
 
         
         
