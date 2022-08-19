@@ -18,6 +18,26 @@
         margin: auto;
     }
 
+    .pay-insurance-house{
+        width: 95% !important;
+    }
+
+    .pay-insurance-house .card-body{
+        width: 100% !important;
+    }
+
+    .pay-insurance-house .shadow{
+        box-shadow: none !important;
+    }
+
+    .pay-insurance-house .card-insurance,.pay-insurance-house .price-summary {
+        border: 1px dotted #002D62 !important;
+    }
+
+    #title-section-summary{
+        display: none;
+    }
+
     .insurance-filter{
         display: none;
     }

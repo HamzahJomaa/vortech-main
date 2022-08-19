@@ -11,7 +11,6 @@ $(document).ready(function() {
     // Update Slider Upon Input Change
     $("body").on("keyup", "#progress-price", function() {
         $("#slider-input").val($(this).val())
-        console.log($(this).val());
     })
 
     // Update Input Upon Slider Change

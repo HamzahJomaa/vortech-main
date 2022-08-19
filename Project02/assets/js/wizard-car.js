@@ -8,14 +8,11 @@ $(document).ready(function() {
 
     // Update Slider Upon Input Change
     $("body").on("keyup", "#progress-price", function() {
-        $(".bar .fill").css("width", `${($(this).val() / ($("#slider").attr("max")-$("#slider").attr("min")))*100}%`);
-
-        $("#slider").val($(this).val())
+        $("#slider-input").val($(this).val())
     })
 
     // Update Input Upon Slider Change
-    $("body").on("input", "#slider", function() {
-        $(".bar .fill").css("width", `${($("#slider").val() / ($("#slider").attr("max")-$("#slider").attr("min")))*100}%`);
+    $("body").on("input", "#slider-input", function() {
         $("#progress-price").val($(this).val())
     })
 
@@ -153,7 +150,7 @@ $(document).ready(function() {
             $(".answers.section").css("flex-direction", "column")
 
             let progress = `<div class="card ${questions[step].type} border-0 w-100 slider-container">
-                                <input id="slider" class="slider" type="range" min="${questions[step].answers[0].value}" max="${questions[step].answers[1].value}" value="${(questions[step].answers[1].value - questions[step].answers[0].value)/2}">
+                                <input id="slider-input" class="slider" type="range" min="${questions[step].answers[0].value}" max="${questions[step].answers[1].value}" value="${(questions[step].answers[1].value - questions[step].answers[0].value)/2}">
                                 <span class="bar"><span class="fill"></span></span>
                             </div>`
             
