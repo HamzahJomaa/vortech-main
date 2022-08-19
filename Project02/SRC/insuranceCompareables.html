@@ -102,7 +102,7 @@
               class="carValueAmount rounded-radius w-fit"
               style="background-color: #6cb4ee"
             >
-            <input type="number" class="form-control progress-price bg-transparent border-0" id="progress-price"/>
+            <input type="number" class="form-control progress-price bg-transparent border-0" id="slider-input"/>
               
             </div>
             <div class="car-value-slider-container">
@@ -110,7 +110,7 @@
                 id="slider"
                 class="slider"
                 type="range"
-                min="10000"
+                min="10"
                 max="100000"
               />
               <span class="bar"><span class="fill"></span></span>
@@ -363,7 +363,7 @@
                   <img
                     src="../assets/images/car-collision.png"
                     alt=""
-                    class="w-20 h-50"
+                    class="image-service "
                   />
                   <div class="w-90">
                     <h6 class="fw-bold">Third Party Liability</h6>
@@ -381,7 +381,7 @@
                   <img
                     src="../assets/images/repair-tool.png"
                     alt=""
-                    class="w-20 h-50"
+                    class="image-service "
                   />
                   <div>
                     <h6 class="fw-bold">Agency Repair</h6>
@@ -399,7 +399,7 @@
                   <img
                     src="../assets/images/repairj-tool.png"
                     alt=""
-                    class="w-20 h-50"
+                    class="image-service "
                   />
                   <div>
                     <h6 class="fw-bold">Excess</h6>
@@ -770,7 +770,7 @@
                   <img
                     src="../assets/images/car-collision.png"
                     alt=""
-                    class="w-20 h-50"
+                    class="image-service "
                   />
                   <div class="w-80">
                     <h6 class="fw-bold">Third Party Liability</h6>
@@ -788,7 +788,7 @@
                   <img
                     src="../assets/images/repair-tool.png"
                     alt=""
-                    class="w-20 h-50"
+                    class="image-service "
                   />
                   <div>
                     <h6 class="fw-bold">Agency Repair</h6>
@@ -806,7 +806,7 @@
                   <img
                     src="../assets/images/repairj-tool.png"
                     alt=""
-                    class="w-20 h-50"
+                    class="image-service "
                   />
                   <div>
                     <h6 class="fw-bold">Excess</h6>
@@ -1177,7 +1177,7 @@
                   <img
                     src="../assets/images/car-collision.png"
                     alt=""
-                    class="w-20 h-50"
+                    class="image-service "
                   />
                   <div class="w-80">
                     <h6 class="fw-bold">Third Party Liability</h6>
@@ -1195,7 +1195,7 @@
                   <img
                     src="../assets/images/repair-tool.png"
                     alt=""
-                    class="w-20 h-50"
+                    class="image-service "
                   />
                   <div>
                     <h6 class="fw-bold">Agency Repair</h6>
@@ -1213,7 +1213,7 @@
                   <img
                     src="../assets/images/repairj-tool.png"
                     alt=""
-                    class="w-20 h-50"
+                    class="image-service "
                   />
                   <div>
                     <h6 class="fw-bold">Excess</h6>
@@ -1584,7 +1584,7 @@
                   <img
                     src="../assets/images/car-collision.png"
                     alt=""
-                    class="w-20 h-50"
+                    class="image-service "
                   />
                   <div class="w-80">
                     <h6 class="fw-bold">Third Party Liability</h6>
@@ -1602,7 +1602,7 @@
                   <img
                     src="../assets/images/repair-tool.png"
                     alt=""
-                    class="w-20 h-50"
+                    class="image-service "
                   />
                   <div>
                     <h6 class="fw-bold">Agency Repair</h6>
@@ -1620,7 +1620,7 @@
                   <img
                     src="../assets/images/repairj-tool.png"
                     alt=""
-                    class="w-20 h-50"
+                    class="image-service "
                   />
                   <div>
                     <h6 class="fw-bold">Excess</h6>
@@ -1973,23 +1973,6 @@
     </section>
 
 
-    <script>
-      // Update Input Upon Slider Change
-      $(document).ready(function(e){
-
-        $("body").on("input", "#slider", function() {
-        $(".bar .fill").css("width", `${($("#slider").val() / ($("#slider").attr("max")-$("#slider").attr("min")))*100}%`);
-        $("#progress-price").val($(this).val())
-        })
-        // $("Myid");
-        // if (x.style.display === "none") {
-        //   x.style.display = "block";
-        // } else {
-        //   x.style.display = "none";
-        // }
-    })
-   
-    </script>
 
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
@@ -2010,6 +1993,16 @@
       integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
       crossorigin="anonymous"
     ></script>
-    <script src="https://kit.fontawesome.com/5d6e878c64.js" crossorigin="anonymous"></script>
+    <script>
+      $(document).ready(function() {
+        $("#slider-input").keyup(function() {
+          $("#slider").val($(this).val())
+
+        });
+        $("#slider").on("input",function(){
+          $("#slider-input").val($(this).val())
+        })
+      });
+    </script>
   </body>
 </html>
