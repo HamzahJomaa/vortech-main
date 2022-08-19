@@ -170,7 +170,7 @@ html, body {
 
 #dynamic-form > div.select-form {
     display: grid;
-    grid-template-columns: auto auto;
+    grid-template-columns: 45% 45%;
     grid-gap: 2rem;
 }
 
@@ -324,6 +324,17 @@ div.form-selected{
     display: none;
 }
 
+#square-images{
+    display: grid;
+    grid-template-columns: 25% 25% 25%;
+    gap: 0 !important;
+    height: fit-content;
+}
+
+#square-images img{
+    border-radius: 1rem;
+}
+
 @media only screen and (max-width: 768px) {
     .login{
         display: none;
@@ -336,17 +347,21 @@ div.form-selected{
         width: 100% !important;
     }
 
-    .square-small {
+    .square-small, .square {
         height: 7.5vh !important ;
         width: 100% !important;
     }
 
-    .square-small .card-body{
+    #square{
+        display: flex !important;
+        flex-direction: column;
+    }
+    .square-small .card-body, .square .card-body{
         flex-direction: row !important;
         justify-content: flex-start !important;
     }
 
-    .square-small img{
+    .square-small img,.square img{
         width: 10% !important;
     }
 

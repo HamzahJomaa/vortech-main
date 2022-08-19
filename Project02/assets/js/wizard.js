@@ -7,30 +7,32 @@ $(document).ready(function() {
 
     // Update Slider Upon Input Change
     $("body").on("keyup", "#progress-price", function() {
-        $(".bar .fill").css("width", `${($(this).val() / ($("#slider").attr("max")-$("#slider").attr("min")))*100}%`);
-
         $("#slider").val($(this).val())
     })
 
     // Update Input Upon Slider Change
     $("body").on("input", "#slider", function() {
-        $(".bar .fill").css("width", `${($("#slider").val() / ($("#slider").attr("max")-$("#slider").attr("min")))*100}%`);
         $("#progress-price").val($(this).val())
-        console.log($(this).val());
     })
 
     let step = 0
 
     $("#back").css("visibility","hidden")
-    $("#titleQuestion").text(questions[4].question)
+    $("#progressBar").css("width", `${(step / questions.length) * 100}%`)
+
+    $("#titleQuestion").text(questions[step].question)
+
+    $(".answers.section").empty()
     $(".answers.section").css("gap", "2rem")
+    $(".answers.section").css("flex-direction", "")
+    $(".answers.section").attr("id",questions[step].type)
 
 
     questions[step].answers.map((item, index) => {
         $(".answers.section").append(`
         <div class="card ${questions[step].type} item">
             <div class="card-body shaddow">
-                <img src="../assets/images/send-icon.png" class="w-50 mb-4" alt="">
+                <img src="../assets/images/send-icon.png" class="w-50 mb-0 mb-lg-4" alt="">
                 <h4 class="w-fit">${item.value}</h4>
             </div>
         </div>
@@ -40,9 +42,8 @@ $(document).ready(function() {
 
     const updateQuestion = (direction) =>{
 
-        if (direction == "next"){
+        if (direction === "next"){
             step++
-
             $("#choices").append(`
                 <div>
                     <h6>${questions[step]?.answerTitle}</h6>

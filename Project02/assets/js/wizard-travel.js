@@ -1,13 +1,13 @@
-$(document).ready(function() {
-    
-    $("body").on("click",".card.item",function(){
+$(document).ready(function () {
+
+    $("body").on("click", ".card.item", function () {
         let checkActive = $(".card.item.active");
         checkActive.toggleClass("active");
         $(this).toggleClass("active");
     })
 
-        const SearchBox = () =>{
-            let search = `<div class='search-box'>
+    const SearchBox = () => {
+        let search = `<div class='search-box'>
                             <input type="text" class="form-control search-input" placeholder="Search">
                             <img src='../assets/images/magnifying-glass.png' />
             </div>`
@@ -16,42 +16,53 @@ $(document).ready(function() {
 
 
     // Update Slider Upon Input Change
-    $("body").on("keyup", "#progress-price", function() {
+    $("body").on("keyup", "#progress-price", function () {
         $("#slider-input").val($(this).val())
     })
 
     // Update Input Upon Slider Change
-    $("body").on("input", "#slider-input", function() {
+    $("body").on("input", "#slider-input", function () {
         $("#progress-price").val($(this).val())
     })
 
     let step = 0
 
-    $("#back").css("visibility","hidden")
+    $("#back").css("visibility", "hidden")
     $("#titleQuestion").text(questions[4].question)
     $(".answers.section").css("gap", "2rem")
 
-    $(".answers.section").attr("id",questions[step].type)
+    $(".answers.section").attr("id", questions[step].type)
 
     questions[step].answers.map((item, index) => {
         $(".answers.section").append(`
-        <div class="card ${questions[step].type} item shadow-sm">
+        <div class="card ${questions[step].type} item border-0">
             <div class="card-body border-0 ">
-                <img src="${item.image}" class="w-50 mb-4" alt="">
+                <img src="${item.image}" class="w-100 mb-1" alt="">
                 <h4 class="w-fit">${item.value}</h4>
             </div>
         </div>
         `)
     })
 
-    SearchBox()
+    $(`<select class="form-select w-75 mx-auto mt-2 " aria-label="Default select example">
+                <option value="" hidden disabled selected>Select the Country</option>
+                <option value="01">Option 1</option>
+                <option value="03">Option 2</option>
+                <option value="04">Option 3</option>
+            </select>
+        <select class="form-select w-75 mx-auto mt-2 " aria-label="Default select example">
+                <option value="" hidden disabled selected>Select the City</option>
+                <option value="01">Option 1</option>
+                <option value="03">Option 2</option>
+                <option value="04">Option 3</option>
+            </select>
+`).insertAfter(`#square-images`)
 
 
+    const updateQuestion = (direction) => {
 
-    const updateQuestion = (direction) =>{
 
-
-        if (direction == "next"){
+        if (direction == "next") {
             step++
 
             $("#choices").append(`
@@ -60,36 +71,34 @@ $(document).ready(function() {
                     <p>${$(".card.item.active").text().trim()}</p>
                 </div>
             `)
-        }
-        else{
+        } else {
             step--
             $("#choices div:last-child").remove()
         }
 
 
-        if (questions[step].search){
+        if (questions[step].search) {
             SearchBox()
-        }else{
+        } else {
             $(".search-box").remove()
         }
 
         if (step != 0)
-            $("#back").css("visibility","visible")
+            $("#back").css("visibility", "visible")
         else
-            $("#back").css("visibility","hidden")
+            $("#back").css("visibility", "hidden")
 
-        
-        
+
         $("#progressBar").css("width", `${(step / questions.length) * 100}%`)
         $("#titleQuestion").text(questions[step].question)
         $(".answers.section").empty()
         $(".answers.section").css("gap", "2rem")
         $(".answers.section").css("flex-direction", "")
-        $(".answers.section").attr("id",questions[step].type)
+        $(".answers.section").attr("id", questions[step].type)
 
-        if (questions[step].type == "rectangle" || questions[step].type == "square" || questions[step].type == "square-small" || questions[step].type == "boxes-rectangle" ){
+        if (questions[step].type == "rectangle" || questions[step].type == "square" || questions[step].type == "square-small" || questions[step].type == "boxes-rectangle") {
             questions[step]?.answers.map((item, index) => {
-                if (item.image && item.value){
+                if (item.image && item.value) {
                     $(".answers.section").append(`
                     <div class="card ${questions[step].type} item shadow-sm ">
                         <div class="card-body">
@@ -98,7 +107,7 @@ $(document).ready(function() {
                         </div>
                     </div>
                     `)
-                }else if (item.image){
+                } else if (item.image) {
                     $(".answers.section").append(`
                     <div class="card ${questions[step].type} item shadow-sm">
                         <div class="card-body">
@@ -106,7 +115,7 @@ $(document).ready(function() {
                         </div>
                     </div>
                     `)
-                } else if (item.description){
+                } else if (item.description) {
                     $(".answers.section").append(`
                         <div class="card ${questions[step].type} item shadow-sm">
                             <div class="card-body">
@@ -114,7 +123,7 @@ $(document).ready(function() {
                                 <p> ${item.description} </p>
                             </div>
                         </div>`)
-                }else{
+                } else {
                     $(".answers.section").css("gap", "1rem")
                     $(".answers.section").append(`
                         <div class="card ${questions[step].type} item shadow-sm">
@@ -125,7 +134,7 @@ $(document).ready(function() {
                     `)
                 }
             })
-        }else if (questions[step].type == "form" ) {
+        } else if (questions[step].type == "form") {
 
             $(".answers.section").empty().css("flex-direction", "column")
             $(".answers.section").append(`
@@ -170,15 +179,15 @@ $(document).ready(function() {
                 </div>
             </div>
             `)
-            
-        }else{
+
+        } else {
             $(".answers.section").css("flex-direction", "column")
 
             let progress = `<div class="card ${questions[step].type} border-0 w-100 slider-container">
-                                <input id="slider-input" class="slider" type="range" min="${questions[step].answers[0].value}" max="${questions[step].answers[1].value}" value="${(questions[step].answers[1].value - questions[step].answers[0].value)/2}">
+                                <input id="slider-input" class="slider" type="range" min="${questions[step].answers[0].value}" max="${questions[step].answers[1].value}" value="${(questions[step].answers[1].value - questions[step].answers[0].value) / 2}">
                                 <span class="bar"><span class="fill"></span></span>
                             </div>`
-            
+
             let label = `<div class='d-flex flex-row h-auto justify-content-between w-100'><h4>AED ${questions[step].answers[0].value}</h4><h4>AED ${questions[step].answers[1].value}</h4></div>`
             let input = `
                 <div class='input-slider border-primary rounded w-100 p-2'>
@@ -186,33 +195,32 @@ $(document).ready(function() {
                 <input type=\"number\" class=\"form-control border-0 progress-price\" id=\"progress-price\">
                 </div>
             `
-        
+
             $(`.answers.section`).append(input, progress, label)
         }
     }
 
 
-    $("body").on("click","#back",()=>{
+    $("body").on("click", "#back", () => {
         updateQuestion("back")
     })
 
-    $("body").on("click","#next",()=>{
+    $("body").on("click", "#next", () => {
         updateQuestion("next")
     })
 
 
-
-    $('body').on('focus',"input", function(event) {
+    $('body').on('focus', "input", function (event) {
         $(this).closest('.float-label-field').addClass('float').addClass('focus');
     })
 
-    $('body').on('blur',"input", function(event) {
+    $('body').on('blur', "input", function (event) {
         $(this).closest('.float-label-field').removeClass('focus');
         if (!$(this).val()) {
-        $(this).closest('.float-label-field').removeClass('float');
+            $(this).closest('.float-label-field').removeClass('float');
         }
     });
-    
+
 })
 
 

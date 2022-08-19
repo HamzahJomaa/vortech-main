@@ -1,5 +1,9 @@
 <html>
     <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
         <link rel="stylesheet" href="../assets/lib/bootstrap-5.0.2/dist/css/bootstrap.min.css"> <!--For Bootstrap Classes-->
         <link rel="stylesheet" href="../assets/css/wizard.css">
     </head>
@@ -34,9 +38,9 @@
                 </div>
             </div>
             <div class="col-8 border-right question-section">
-                <div class="p-4">
+                <div class="p-4 w-75">
                     <h4 id="titleQuestion">Select the home owership of your house</h4>
-                    <div class="answers section align-content-start mt-4 w-75">
+                    <div class="answers section align-content-start mt-4 w-100">
                         
                     </div>
                 </div>
@@ -56,12 +60,14 @@
                     answerTitle : "Ownership",
                     question : "Select the medical coverage you want",
                     answers : [
-                        {id: "1", value:"Myself"},
-                        {id: "2", value:"Myself & Dependents"},
-                        {id: "3", value:"My Dependents"},
-                        {id: "4", value:"Domestic Helper"},
+                        {id: "1", image: "../assets/images/construction-arbitration-square-middleeast-smartcities-01.jpg",value:"Middle East"},
+                        {id: "2", image: "../assets/images/construction-arbitration-square-middleeast-smartcities-01.jpg", value:"Asia"},
+                        {id: "3", image: "../assets/images/construction-arbitration-square-middleeast-smartcities-01.jpg", value:"USA / Europe"},
+                        {id: "4", image: "../assets/images/construction-arbitration-square-middleeast-smartcities-01.jpg", value:"Schegnen"},
+                        {id: "4", image: "../assets/images/construction-arbitration-square-middleeast-smartcities-01.jpg", value:"HAJJ / UMRAH"},
+                        {id: "4", image: "../assets/images/construction-arbitration-square-middleeast-smartcities-01.jpg", value:"World Wide"},
                     ],
-                    type: "boxes-rectangle",
+                    type: "square-images",
                 }, {
                     answerTitle : "City",
                     question : "Select the city",
@@ -120,6 +126,6 @@
                 }]
         </script>
 
-        <script src="../assets/js/wizard-medical.js"></script>
+        <script src="../assets/js/wizard-travel.js"></script>
     </body>
 </html>
