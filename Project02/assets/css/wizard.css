@@ -1,6 +1,8 @@
 html, body {
     max-width: 100% !important;
     overflow-x: hidden !important;
+    font-family: 'Poppins', sans-serif;
+
 }
 
 
@@ -65,6 +67,30 @@ html, body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+.search-input{
+    border: none !important;
+}
+
+.search-input:focus{
+    box-shadow: none;
+}
+
+.search-box img{
+    width: 30px;
+    height: 30px;
+}
+
+.search-box{
+    border: 1px solid #0F3755;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border-radius: 1rem;
+    width: 70%;
+    padding: 0.2rem;
+    padding-right: 9px;
 }
 
 #whatsapp{
@@ -340,7 +366,7 @@ div.form-selected{
     }
 
     #btns{
-        position: absolute;
+        position: fixed;
         width: 100% !important;
         bottom: 0;
         background-color: white;
@@ -379,6 +405,11 @@ div.form-selected{
 
     .offcanvas-end {
         width: 60vw
+    }
+
+    .search-box{
+        width: 90%;
+        margin: auto;
     }
 
 

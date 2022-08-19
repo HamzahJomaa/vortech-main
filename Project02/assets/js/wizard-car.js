@@ -6,6 +6,15 @@ $(document).ready(function() {
         $(this).toggleClass("active");
     })
 
+        const SearchBox = () =>{
+            let search = `<div class='search-box'>
+                            <input type="text" class="form-control search-input" placeholder="Search">
+                            <img src='../assets/images/info.png' />
+            </div>`
+        $(search).insertAfter("#titleQuestion")
+    }
+
+
     // Update Slider Upon Input Change
     $("body").on("keyup", "#progress-price", function() {
         $("#slider-input").val($(this).val())
@@ -35,8 +44,12 @@ $(document).ready(function() {
         `)
     })
 
+    SearchBox()
+
+
 
     const updateQuestion = (direction) =>{
+
 
         if (direction == "next"){
             step++
@@ -53,8 +66,20 @@ $(document).ready(function() {
             $("#choices div:last-child").remove()
         }
 
+
+        if (questions[step].search){
+            SearchBox()
+        }else{
+            $(".search-box").remove()
+        }
+
         if (step != 0)
             $("#back").show()
+        else
+            $("#back").hide()
+
+        
+        
         $("#progressBar").css("width", `${(step / questions.length) * 100}%`)
         $("#titleQuestion").text(questions[step].question)
         $(".answers.section").empty()
@@ -166,6 +191,7 @@ $(document).ready(function() {
         }
     }
 
+
     $("body").on("click","#back",()=>{
         updateQuestion("back")
     })
@@ -173,6 +199,7 @@ $(document).ready(function() {
     $("body").on("click","#next",()=>{
         updateQuestion("next")
     })
+
 
 
     $('body').on('focus',"input", function(event) {
