@@ -52,4 +52,13 @@
         top: 2rem;
         width: 20% !important;
     }
+
+    .buttons-thankyou button{
+        font-size: .8rem;
+        padding: 0;
+    }
+
+    ul{
+        padding-left: 0 !important;
+    }
 }

@@ -1,15 +1,57 @@
 <html>
     <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
         <link rel="stylesheet" href="../assets/lib/bootstrap-5.0.2/dist/css/bootstrap.min.css"> <!--For Bootstrap Classes-->
         <link rel="stylesheet" href="../assets/css/wizard.css">
     </head>
     <body>
         <section class="p-3">
-            <div class="d-flex justify-content-between">
+            <div class="d-flex justify-content-between align-items-center">
                 <h4>Insurance</h4>
-                <button class="btn btn-outline-secondary" type="button" >
+                <div class="right-icons">
+                    <img src="../assets/images/home (2).png" alt="">
+                    <img src="../assets/images/account.png" alt="">
+                </div>
+                <button class="btn btn-outline-secondary login" type="button" >
                     Login
                 </button>
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                    <div class="offcanvas-header">
+                    <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Offcanvas</h5>
+                    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                    <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                        <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                        <a class="nav-link" href="#">Link</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="offcanvasNavbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Dropdown
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="offcanvasNavbarDropdown">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li>
+                            <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                        </li>
+                    </ul>
+                    <form class="d-flex">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-success" type="submit">Search</button>
+                    </form>
+                    </div>
+                </div>
             </div>
         </section>
         <section style="background: #F4F4F4ff;-webkit-box-shadow: 0px 22px 31px -31px rgba(0,0,0,0.75);-moz-box-shadow: 0px 22px 31px -31px rgba(0,0,0,0.75);box-shadow: 0px 22px 31px -31px rgba(0,0,0,0.75);">
@@ -33,14 +75,14 @@
                     </ol>
                 </div>
             </div>
-            <div class="col-8 border-right question-section">
+            <div class="col-lg-8 col-12 border-right question-section">
                 <div class="p-4">
                     <h4 id="titleQuestion">Select the home owership of your house</h4>
                     <div class="answers align-content-start section mt-4 w-75">
                         
                     </div>
                 </div>
-                <div class="p-4 d-flex w-75 justify-content-between">
+                <div class="p-4 d-flex w-75 justify-content-between" id="btns">
                     <button class="btn btn-outline-secondary w-25 button-primary" id="back" type="button">Back</button>
                     <button class="btn btn-outline-secondary w-25 button-primary" id="next" type="button">Next</button>
                 </div>
@@ -56,13 +98,18 @@
                     answerTitle : "Ownership",
                     question : "Select the home owership of your house",
                     answers : [
-                        {id: "1", image:"../assets/images/send-icon.png"},
-                        {id: "2", image:"../assets/images/send-icon.png"},
-                        {id: "3", image:"../assets/images/send-icon.png"},
-                        {id: "4", image:"../assets/images/send-icon.png"},
-                        {id: "5", image:"../assets/images/send-icon.png"},
-                        {id: "6", image:"../assets/images/send-icon.png"},
-                        {id: "7", image:"../assets/images/send-icon.png"},
+                        {id: "1", image:"../assets/images/send-icon.png", value:"Car 1"},
+                        {id: "2", image:"../assets/images/send-icon.png", value:"Car 2"},
+                        {id: "3", image:"../assets/images/send-icon.png", value:"Car 3"},
+                        {id: "4", image:"../assets/images/send-icon.png", value:"Car 4"},
+                        {id: "5", image:"../assets/images/send-icon.png", value:"Car 5"},
+                        {id: "6", image:"../assets/images/send-icon.png", value:"Car 6"},
+                        {id: "7", image:"../assets/images/send-icon.png", value:"Car 7"},
+                        {id: "7", image:"../assets/images/send-icon.png", value:"Car 7"},
+                        {id: "7", image:"../assets/images/send-icon.png", value:"Car 7"},
+                        {id: "7", image:"../assets/images/send-icon.png", value:"Car 7"},
+                        {id: "7", image:"../assets/images/send-icon.png", value:"Car 7"},
+
                     ],
                     type: "square-small"
                 }, {

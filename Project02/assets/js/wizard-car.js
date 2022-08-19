@@ -31,7 +31,8 @@ $(document).ready(function() {
         $(".answers.section").append(`
         <div class="card ${questions[step].type} item shadow-sm">
             <div class="card-body border-0 ">
-                <img src="../assets/images/send-icon.png" class="w-50 mb-4" alt="">
+                <img src="${item.image}" class="w-50 mb-4" alt="">
+                <h4 class="w-fit">${item.value}</h4>
             </div>
         </div>
         `)
