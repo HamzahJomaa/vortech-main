@@ -1,9 +1,6 @@
 .filter-button button{
     display: none;
 }
-.responsive-filter-title{
-    display: none;
-}
 
 
 @media only screen and (max-width: 768px) {

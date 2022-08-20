@@ -419,7 +419,7 @@
               <div class="card-body d-flex flex-lg-row flex-column col-8 justify-content-between">
                 <div class="card-item d-flex flex-row w-30 gap-lg-3 gap-1 ">
                   <img
-                    src="../assets/images/car-collision.png"
+                    src="../assets/images/protection.png"
                     alt=""
                     class="image-service "
                   />
@@ -835,7 +835,7 @@
               <div class="card-body d-flex flex-lg-row flex-column col-8 justify-content-between">
                 <div class="card-item d-flex flex-row w-30 gap-lg-3 gap-1 ">
                   <img
-                    src="../assets/images/car-collision.png"
+                    src="../assets/images/protection.png"
                     alt=""
                     class="image-service "
                   />
@@ -1247,7 +1247,7 @@
               <div class="card-body d-flex flex-lg-row flex-column col-8 justify-content-between">
                 <div class="card-item d-flex flex-row w-30 gap-lg-3 gap-1 ">
                   <img
-                    src="../assets/images/car-collision.png"
+                    src="../assets/images/protection.png"
                     alt=""
                     class="image-service "
                   />
@@ -1662,7 +1662,7 @@
               <div class="card-body d-flex flex-lg-row flex-column col-8 justify-content-between">
                 <div class="card-item d-flex flex-row w-30 gap-lg-3 gap-1 ">
                   <img
-                    src="../assets/images/car-collision.png"
+                    src="../assets/images/protection.png"
                     alt=""
                     class="image-service "
                   />
@@ -2078,7 +2078,7 @@
               <div class="card-body d-flex flex-lg-row flex-column col-8 justify-content-between">
                 <div class="card-item d-flex flex-row w-30 gap-lg-3 gap-1 ">
                   <img
-                    src="../assets/images/car-collision.png"
+                    src="../assets/images/protection.png"
                     alt=""
                     class="image-service "
                   />
@@ -2494,7 +2494,7 @@
               <div class="card-body d-flex flex-lg-row flex-column col-8 justify-content-between">
                 <div class="card-item d-flex flex-row w-30 gap-lg-3 gap-1 ">
                   <img
-                    src="../assets/images/car-collision.png"
+                    src="../assets/images/protection.png"
                     alt=""
                     class="image-service "
                   />
@@ -2914,21 +2914,27 @@
     ></script>
     <script>
       $(document).ready(function() {
+        $(".responsive-filter-title").hide()
+        $("#back").hide()
 
-          $("#filter-button").click(function(){
+
+        $("#filter-button").click(function(){
           $("#insurance-filter").toggle();
           $(".insurance-house").toggle();
           $(".title-heading").toggle();
-          $(".responsive-filter-title").toggle();
+          $(".responsive-filter-title").show()
           $(".filter-button").toggle();
+          $("#back").show()
+
         });
 
         $("#back").click(function(){
           $("#insurance-filter").toggle();
           $(".insurance-house").toggle();
           $(".title-heading").toggle();
-          $(".responsive-filter-title").toggle();
+          $(".responsive-filter-title").hide()
           $(".filter-button").toggle();
+          $("#back").hide()
         });
 
         $("#slider-input").keyup(function() {
