@@ -14,6 +14,9 @@ $(document).ready(function () {
         $(search).insertAfter("#titleQuestion")
     }
 
+    const FlighSection = () => {
+    }
+
 
     // Update Slider Upon Input Change
     $("body").on("keyup", "#progress-price", function () {
@@ -44,18 +47,19 @@ $(document).ready(function () {
         `)
     })
 
-    $(`<select class="form-select w-75 mx-auto mt-2 " aria-label="Default select example">
+    $(`<div class="d-flex flex-column align-items-start" id='dropdown'>
+    <select class="form-select w-75 mt-2 " aria-label="Default select example">
                 <option value="" hidden disabled selected>Select the Country</option>
                 <option value="01">Option 1</option>
                 <option value="03">Option 2</option>
                 <option value="04">Option 3</option>
             </select>
-        <select class="form-select w-75 mx-auto mt-2 " aria-label="Default select example">
+        <select class="form-select w-75 mt-2 " aria-label="Default select example">
                 <option value="" hidden disabled selected>Select the City</option>
                 <option value="01">Option 1</option>
                 <option value="03">Option 2</option>
                 <option value="04">Option 3</option>
-            </select>
+            </select></div>
 `).insertAfter(`#square-images`)
 
 
@@ -77,10 +81,24 @@ $(document).ready(function () {
         }
 
 
+        if (questions[step].type != "square-images"){
+            $("#dropdown").removeClass("d-flex")
+            $("#dropdown").css("display","none")
+        }else{
+            $("#dropdown").addClass("d-flex")
+
+        }
+
         if (questions[step].search) {
             SearchBox()
         } else {
             $(".search-box").remove()
+        }
+
+        if (questions[step].flight){
+            FlighSection()
+        }else{
+            $("#flight-box").remove()
         }
 
         if (step != 0)
@@ -135,7 +153,6 @@ $(document).ready(function () {
                 }
             })
         } else if (questions[step].type == "form") {
-
             $(".answers.section").empty().css("flex-direction", "column")
             $(".answers.section").append(`
             <div class="col-xl-12">
@@ -179,6 +196,72 @@ $(document).ready(function () {
                 </div>
             </div>
             `)
+        }else if (questions[step].type == "square-images") {
+            questions[step].answers.map((item, index) => {
+                $(".answers.section").append(`
+                <div class="card ${questions[step].type} item border-0">
+                    <div class="card-body border-0 ">
+                        <img src="${item.image}" class="w-100 mb-1" alt="">
+                        <h4 class="w-fit">${item.value}</h4>
+                    </div>
+                </div>
+                `)
+            })
+        }else if (questions[step].type === 'dynamic-form'){
+
+            $(".answers.section").append("<div class='date-form'></div><div class='form-selected'></div>")
+            questions[step].answers.map((item, index) => {
+                $(".answers.section > div.date-form").append(`
+                <div class="card ${questions[step].type} item shadow-sm">
+                    <div class="card-body shaddow">
+                        <h4 class="w-fit">${item.value}</h4>
+                    </div>
+                </div>
+                `)
+            })
+            $(".answers.section > div.form-selected").append(`
+                <div class='row datepicker'> 
+                    <div class="col-xl-6 mb-3">
+                        <div class="form-group d-flex flex-column">
+                            <label for="insuranceCompanyName" >Trip End Date</label>
+                            <div class="input-group d-flex flex-row align-items-center">
+                                <div class="input-group-addon">
+                                    <img src='../assets/images/date-of-birth.png' width='30' />
+                                </div>
+                                <input id="datepicker01" type='text' name="insuranceCompanyName">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-6 mb-3">
+                        <div class="form-group d-flex flex-column">
+                            <label for="insuranceCompanyName" >Trip End Date</label>
+                            <div class="input-group d-flex flex-row align-items-center">
+                                <div class="input-group-addon">
+                                    <img src='../assets/images/date-of-birth.png' width='30' />
+                                </div>
+                                <input id="datepicker02" type='text' name="insuranceCompanyName">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            <div class='row datepicker'>
+                <div class="col-xl-12 mb-3">
+                    <div class="form-group d-flex flex-column">
+                        <label for="insuranceCompanyName" >Trip End Date</label>
+                        <div class="input-group d-flex flex-row align-items-center">
+                            <div class="input-group-addon">
+                                <img src='../assets/images/date-of-birth.png' width='30' />
+                            </div>
+                            <input id="datepicker03" type='text' name="insuranceCompanyName">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            `)
+
+            $( "#datepicker01" ).datepicker();
+            $( "#datepicker02" ).datepicker();
+            $("#datepicker03").datepicker({})
 
         } else {
             $(".answers.section").css("flex-direction", "column")
