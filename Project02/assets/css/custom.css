@@ -415,7 +415,11 @@ footer .links a{
     border-bottom: solid 2px #002D62;
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (max-width: 768px) {
+
+    .document-cards.documents{
+        width: 100% !important;
+    }
 .insurance-house .premium{
     position:relative;
     top:50%;

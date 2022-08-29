@@ -13,6 +13,12 @@
     margin: 10px 5px;
 }
 
+.border-bottom{
+    border: 0 !important;
+}
+
+
+
 #msform .action-button:hover, #msform .action-button:focus {
     box-shadow: 0 0 0 2px white, 0 0 0 3px #ee0979;
 }
